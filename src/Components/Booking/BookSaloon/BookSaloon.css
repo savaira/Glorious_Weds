@@ -1,0 +1,16 @@
+.book{
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 40px;
+    width: 400px;
+    height: 430px;
+    text-align: center;
+    border: 3px groove purple;
+    background-color: blueviolet;
+  }
+  .booktitle{
+    color:blueviolet;
+    font-weight: 700;
+    font-size: 70px;
+    margin-top: 20px;
+}

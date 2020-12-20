@@ -1,0 +1,15 @@
+.forgot-btn{
+    text-align: center;
+    font-weight: 600;
+    color: black;
+     }
+     .btn-log{
+         border: 3px solid blue;
+         text-align: center;
+         color: white;
+         font-size: 12px;
+         font-weight: 700;
+     }
+.warning{
+    color: red;
+}

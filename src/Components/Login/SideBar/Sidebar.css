@@ -1,0 +1,16 @@
+.servicelist {
+  font-size: 15px;
+  font-weight:600;
+  list-style: none;
+ text-align: center;
+ border: 1px groove gray;
+ width: 250px;
+ height: 40px;
+}
+.deal{
+    font-size: 30px;
+    text-align: center;
+}
+.side{
+  align-content: center;
+}

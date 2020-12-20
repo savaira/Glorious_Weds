@@ -1,0 +1,11 @@
+.chkbox{
+    text-align: left;
+}
+.city{
+    padding-right: 10px;
+}
+.warning{
+    text-align: left;
+    color: red;
+    font-size: 20px;
+}

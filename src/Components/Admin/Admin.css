@@ -1,0 +1,37 @@
+.admin{
+    text-align: left;
+    font-size: 50px;
+    font-weight: bold;
+    color: indigo;
+  }
+  .bar{
+      text-align: left;
+  }
+  .searchAdmin{
+    margin-top: 30px;
+    width: 250px;
+  }
+ 
+  #button-area {
+    padding-top: 0.0625rem;
+    padding-bottom: 0.0625rem;
+    background-color: skyblue;
+    border: 0.125rem solid rgba(92, 91, 91, 0.589);
+    border-radius: 0.1875rem;
+ }
+ #button-area:hover{
+     cursor: text;
+ }
+ .btn-admin {
+  border: 3px groove blue;
+  color: black;
+  font-size: 20px;
+  padding: 2px;
+  font-weight: 400;
+  margin-top: 20px;
+
+}
+button:hover {
+  color: white;
+  
+}
