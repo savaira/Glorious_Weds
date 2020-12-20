@@ -1,10 +1,28 @@
 import React, { useState } from 'react';
-import {Form,Row,Col,Button} from 'react-bootstrap';
+import {Form,Row,Col} from 'react-bootstrap';
 import './Signform.css'
 import firebase from '../../Database/Database'
 import { useHistory} from 'react-router-dom';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import LoginIcon from '@material-ui/icons/AccountCircle';
 
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    '&:hover': {
+      color: 'black'
+  }
+  },
+});
 const Signform = () => {
+  const classes = useStyles();
   const history = useHistory()
   const [state , setstate] = useState({
     fname : "",
@@ -69,10 +87,11 @@ const Signform = () => {
       }
     }
     return (  
-        <Form  >
-        <Row className="sign-field">
-          <Col>
+        <Form className="sign-field" >
+        <Row >
+          <Col >
             <Form.Control 
+           
             placeholder="First name" 
             value={state.fname}
             onChange={e => setstate({...state ,fname : e.target.value})}
@@ -80,6 +99,7 @@ const Signform = () => {
           </Col>
           <Col>
             <Form.Control 
+          
             placeholder="Last name" 
             value={state.lname}
             onChange={e => setstate({...state ,lname : e.target.value})}
@@ -88,10 +108,17 @@ const Signform = () => {
         </Row>
         <Row className="sign-field">
           <Col>
-            <Form.Control type="Date" placeholder="Date of Birth" />
+          <Form.Control 
+        
+            type="Email" 
+            placeholder=" Enter Email" 
+            value={state.email}
+            onChange={e => setstate({...state ,email : e.target.value})}
+            />
           </Col>
           <Col>
             <Form.Control 
+         
             type="tel"
             placeholder="Phone Number" 
             value={state.phn}
@@ -101,41 +128,37 @@ const Signform = () => {
         </Row>
         <Row className="sign-field">
           <Col>
-            <Form.Control 
-            type="Email" 
-            placeholder=" Enter Email" 
-            value={state.email}
-            onChange={e => setstate({...state ,email : e.target.value})}
-            />
-          </Col>
-          <Col>
-            <Form.Control 
+          <Form.Control 
+          
             type="text" 
             placeholder="Enter Address" 
             value={state.address}
             onChange={e => setstate({...state ,address : e.target.value})}
             />
           </Col>
-        </Row>
-        <Row className="sign-field">
-        <Col>
-            <Form.Control 
+          <Col>
+          <Form.Control 
+        
             type="Password" 
             placeholder="New Password" 
             value={state.pass}
             onChange={e => setstate({...state ,pass : e.target.value})}
             />
           </Col>
-          <Col>
-            <Form.Control 
+        </Row>
+        <Row className="sign-field">
+        <Col>
+        <Form.Control 
+        className="sign-up"
             type="Password" 
             placeholder="Confirm Password" 
             value={state.cpass}
             onChange={e => setstate({...state ,cpass : e.target.value})}
             />
           </Col>
+         
         </Row>
-        <table className="chkbox">
+        <table className="chkbox" className="sign-field">
           <td>
         <th><input 
         type="checkbox" 
@@ -147,16 +170,12 @@ const Signform = () => {
         <Row>
         <Col>
         <Form.Text className="warning">{state.erro}</Form.Text>
-        <label for="cities" className="city">Choose the City:</label>
-      <select id="select-city">
-        <option value="Islamabad">Islamabad</option>
-        <option value="Rawalpindi">Rawalpindi</option>
-      </select>
+       
           </Col>
         </Row>
          <Button  
-        variant="primary" 
-        onClick={onSubmit}>Sign Up</Button> 
+        
+        onClick={onSubmit} className={classes.root} startIcon={<LoginIcon />} >Sign Up</Button> 
       </Form>
     );
 }

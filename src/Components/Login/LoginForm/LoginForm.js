@@ -1,13 +1,31 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import {Link} from 'react-router-dom'
 import firebase from '../../Database/Database'
 import { useHistory} from 'react-router-dom';
-import { useLocalStorage } from '../../LocalStorage/Local';
+import { useLocalStorage } from './../../LocalStorage/Local';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import LoginIcon from '@material-ui/icons/AccountCircle';
+
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    '&:hover': {
+      color: 'black'
+  }
+  },
+});
 
 const LoginForm = () => {
-  const [name, setName] = useLocalStorage('username', 'null');
+  const classes = useStyles();
   const history = useHistory();
   const [state , setstate] = useState({
     pass : "",
@@ -15,7 +33,7 @@ const LoginForm = () => {
     invalidemail:"",
     invalidpass:""
     });
-    
+    const [name, setName] = useLocalStorage('username', 'null');
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +60,7 @@ const LoginForm = () => {
       setstate({...state, invalidpass: 'Enter Password' , invalidemail:''});
       
     }
-    else if(state.email === 'admin' && state.pass ==='12'){
+    else if(state.email == 'admin@gweds.com' && state.pass =='1234'){
       setName(state.email);
     }
     else{
@@ -51,7 +69,7 @@ const LoginForm = () => {
     const snapshot = await db.where('email', '==', state.email)
     .where('pass', '==', state.pass).get();
     if (snapshot.empty) {
-      setstate({...state , invalidpass:'Wrong Data'});
+      setstate({...state , invalidpass:'Invalid email or password'});
       return;
     }  
 
@@ -62,13 +80,13 @@ setName(state.email);
 // history.push("/Header");
 }
 
-history.push("/");
+history.push("/Header");
   };
   return ( 
     <div>
       <Form>
         <Form.Group controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
+          <Form.Label className="log">Email address</Form.Label>
           <Form.Control
            type="email" 
            placeholder="Enter email"
@@ -79,7 +97,7 @@ history.push("/");
   <Form.Text className="warning">{state.invalidemail}</Form.Text>
         </Form.Group>
         <Form.Group controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="log">Password</Form.Label>
           <Form.Control 
           type="password" 
           placeholder="Password" 
@@ -98,7 +116,7 @@ history.push("/");
             Not Registered!
           </Link>
         </Form.Group>
-        <Button className="btn-log" type="submit" onClick={onSubmit}>
+        <Button className={classes.root} startIcon={<LoginIcon />} type="submit" onClick={onSubmit}>
           Submit
         </Button>
       </Form>

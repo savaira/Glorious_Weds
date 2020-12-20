@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Images.css'
-import fb from './fb.png';
+import fb from './fb2.png';
 import insta from './insta.png';
-import twit from './tw.png';
-import youtube from './youtube.png';
+import twit from './tw2.png';
+import youtube from './you2.png';
 import 'bootstrap/dist/css/bootstrap.css';
 import {Container, Row, Col} from 'react-bootstrap';
 
@@ -11,7 +11,7 @@ const Images = () => {
     return ( 
     <div>
 
-    <h5 class="text-uppercase">Join Us on Social Media</h5>
+    <h5 class="text-uppercase" className="soci">Join Us on Social Media</h5>
     <Container>
       <Row>
         <Col>

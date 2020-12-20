@@ -1,3 +1,28 @@
 .View{
-margin-top: 20px;
+margin-top: 48px;
+}
+.viewAttri{
+    font-size: 20px;
+    font-family: 'Langar', cursive,Regular 400;
+}
+.viewtbl{
+    margin-top: 75px;
+    margin-left: -70px;
+}
+.attriValue{
+    margin-left:-459px;
+    font-family: 'Courgette', cursive;
+}
+.tbldata{
+    font-size: 25px;
+    padding: 60px;
+    margin-left: 12px;
+    color:black;
+    font-family: 'Roboto', sans-serif;
+}
+.tbldata2{
+    color:darkcyan;
+    font-size: 16px;
+    font-family: 'Dancing Script', cursive,Reguar 400;
+    font-weight: 400;
 }

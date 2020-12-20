@@ -1,23 +1,11 @@
 .Update{
-    -ms-flow-into: 20px;
-    font-weight: 500;
-    margin-top: 20px;
+  -ms-flow-into: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: 'Amaranth', sans-serif,Regular 400;
 }
-.btn-backnupdate {
-    text-align: center;
-    border: 3px groove blue;
-    color: black;
-    font-size: 20px;
-    padding: 2px;
-    font-weight: 400;
-    margin-top: 20px;
-    margin-left:10px;
 
-  }
-  button:hover {
-    color: white;
-    
-  }
 .tex{
-  color: red;
+color: red;
 }

@@ -2,14 +2,18 @@
     text-align: center;
     font-weight: 600;
     color: black;
+    font-family: 'Bebas Neue', cursive; 
+    
      }
-     .btn-log{
-         border: 3px solid blue;
-         text-align: center;
-         color: white;
-         font-size: 12px;
-         font-weight: 700;
-     }
+    .forgot-btn:hover{
+        color:white;
+    }
 .warning{
     color: red;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+}
+.log{
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
 }

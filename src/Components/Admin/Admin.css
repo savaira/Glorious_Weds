@@ -1,37 +1,18 @@
 .admin{
-    text-align: left;
-    font-size: 50px;
+    text-align: center;
+    font-size: 70px;
     font-weight: bold;
-    color: indigo;
+    color: #FF7B7B;
+    font-family: 'Heebo', sans-serif;
   }
-  .bar{
-      text-align: left;
+  #dropdown{
+    text-align: center;
+    margin-left: -90%;
   }
-  .searchAdmin{
-    margin-top: 30px;
-    width: 250px;
+  .drop{
+    font-size: 17px;
+    font-family: 'Noto Sans JP', sans-serif;
+    margin-left: 25%;
   }
  
-  #button-area {
-    padding-top: 0.0625rem;
-    padding-bottom: 0.0625rem;
-    background-color: skyblue;
-    border: 0.125rem solid rgba(92, 91, 91, 0.589);
-    border-radius: 0.1875rem;
- }
- #button-area:hover{
-     cursor: text;
- }
- .btn-admin {
-  border: 3px groove blue;
-  color: black;
-  font-size: 20px;
-  padding: 2px;
-  font-weight: 400;
-  margin-top: 20px;
-
-}
-button:hover {
-  color: white;
   
-}

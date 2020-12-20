@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect,useState } from 'react';
 import './SignText.css'
+import firebase from '../../Database/Database'
 import SignUp from './../../SignUp/SignUp';
 import {Link} from 'react-router-dom';
 import { useLocalStorage } from '../../LocalStorage/Local';
 import loginpic from './login.png';
-import firebase from '../../Database/Database';
 
 const SignText = () => {
     const [name, setName] = useLocalStorage('username', 'null');
@@ -16,10 +16,11 @@ const SignText = () => {
         
         snapshot.forEach(doc => {setstate(doc.data().people);});
       });
-
+    
     const check = () => {
         if (name != 'null'){
-            if(name == 'admin'){
+            console.log(name);
+            if(name == 'admin@gweds.com'){
                 return (
                     <Link to='/Admin/Admincustomer'>
                     <img src={loginpic} className="images" />

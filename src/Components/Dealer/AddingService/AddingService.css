@@ -4,12 +4,32 @@
     font-size: 20px;
     font-weight: 500;
     margin-right: 300px;
-    text-align: justify;
+    font-family: 'Langar', cursive,Regular 400;
+    
 }
-.bton{
+#bton{
     margin-top: 10px;
-    margin-left: 12px;
+    margin-left: 50%;
 }
 #eror{
     color: red;
+}
+.serviceLabel{
+    font-size: 20px;
+    font-family: 'Langar', cursive,Regular 400;
+}
+.serviceCol{
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.serviceCol2{
+    margin-top: 2%;
+    text-align: center;
+    margin-left: 25%;
+}
+.dropser{
+    margin-left: 35%;
+}
+.dropser2{
+    margin-left: 12%;
 }

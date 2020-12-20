@@ -10,7 +10,7 @@ const Login = () => {
     <div>
         <LoginText/>
         <Row>
-        <Col className="logi">
+        <Col className="logi col-4">
           <LoginForm/>
         </Col>
         <Col>

@@ -1,0 +1,16 @@
+.dealerdet{
+
+text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #FF7B7B;
+    font-family: 'Heebo', sans-serif;}
+    .tblHead{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 17px;
+    }
+    .tbl-data{
+        font-family: 'Langar', cursive;
+    }

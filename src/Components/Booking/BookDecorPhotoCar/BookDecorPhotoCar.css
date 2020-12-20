@@ -5,15 +5,23 @@
     width: 400px;
     height: 430px;
     text-align: center;
-    border: 3px groove purple;
-    background-color: blueviolet;
+    border: 3px groove cadetblue;
+    padding-top: 30px;
+    background-color:#0099E5;;
+    font-weight: bold;
+    margin-left: 500px;
+    padding-bottom: 30px;
   }
   .booktitle{
-    color:blueviolet;
-    font-weight: 700;
-    font-size: 70px;
-    margin-top: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #FF7B7B;
+    font-family: 'Heebo', sans-serif;
 }
 .btn-book{
-  margin-top: 10px;
+  margin-left: 10px;
+}
+.tit{
+  font-family: 'Permanent Marker', cursive;
 }

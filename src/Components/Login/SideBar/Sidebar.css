@@ -2,15 +2,25 @@
   font-size: 15px;
   font-weight:600;
   list-style: none;
- text-align: center;
- border: 1px groove gray;
+ text-align: centre;
+ margin-left: 160px;
+ border: 1px groove rgb(177, 172, 172);
  width: 250px;
  height: 40px;
+ font-family: 'Satisfy', cursive;
+ background-color: #6495ED;
+ margin-top: 10px;
 }
 .deal{
     font-size: 30px;
-    text-align: center;
+    text-align:right;
+    margin-right: 88px;
+    font-family: 'Lobster', cursive;
 }
 .side{
   align-content: center;
+}
+li:hover{
+  color: white;
+  background-color:#FF7B7B;
 }

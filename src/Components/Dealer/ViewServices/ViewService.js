@@ -21,7 +21,7 @@ const ViewServices = () => {
             <Container className="tabl"> 
                 <Table bordered hover >
   <thead>
-    <tr>
+    <tr className="tdata">
     
       <th>Service No</th>
       <th>Service Name</th>
@@ -29,7 +29,7 @@ const ViewServices = () => {
   </thead>
   <tbody>
   {aray.map((aray,i) => 
-    <tr><td key={i}>{i+1}</td><td key={i}>{aray}</td></tr>)}
+    <tr className="tdata2"><td key={i}>{i+1}</td><td key={i}>{aray}</td></tr>)}
   </tbody>
 </Table>
 </Container>

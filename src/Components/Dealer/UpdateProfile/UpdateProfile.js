@@ -1,11 +1,30 @@
 import React, { useState,useEffect } from 'react';
 import './UpdateProfile.css'
 import firebase from '../../Database/Database';
-import { Container, Row, Col, Table, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { useLocalStorage } from './../../LocalStorage/Local';
 import {useHistory} from 'react-router-dom';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import UpdateIcon from '@material-ui/icons/Update';
+
+const useStyle = makeStyles({
+    root: {
+      background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+      border: 0,
+      borderRadius: 3,
+      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+      color: 'white',
+      height: 48,
+      padding: '0 30px',
+      '&:hover': {
+        color: 'black'
+    }
+    },
+  });
 
 const UpdateProfile = () => {
+    const classes = useStyle();
     const [name, setName] = useLocalStorage('username', 'null');
     const [state , setstate] = useState({
         phn : "",
@@ -149,7 +168,7 @@ const UpdateProfile = () => {
                   </Row>
                   <p className="tex">{state.erro}</p>
                   </Container>
-                  <Button className="btn-backnupdate" onClick={update}>Update</Button>
+                  <Button className={classes.root} startIcon={<UpdateIcon />} onClick={update}>Update</Button>
                   </div>
      );
 }

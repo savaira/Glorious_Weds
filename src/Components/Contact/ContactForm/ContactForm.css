@@ -1,0 +1,29 @@
+.contForm{
+    width: 30px;
+    height: 30px;
+    
+   
+}
+.condetails{
+    margin-right: 233px;
+}
+.contain{
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
+    background-color: #0099E5;
+    padding: 20px;
+}
+.icon{
+    margin-left: 30%;
+    margin-bottom: 10px;
+   
+}
+.gap{
+    margin-top: 12px;
+}
+.det{
+    font-size: 18px;
+    font-weight:600;
+    font-family: 'Permanent Marker', cursive;
+}

@@ -21,8 +21,10 @@ const Admin = ({match}) => {
       <h1 className="admin p-3">Admin</h1>
       <Container>
       <Row>
+        <Col className='col-3 drop'><p>Select User type</p></Col>
         <Col>
         <select 
+        className="col-3"
            id="dropdown" 
             value={state}
             onChange={onChange}

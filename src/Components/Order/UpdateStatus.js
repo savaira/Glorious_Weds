@@ -1,8 +1,9 @@
 import React, { useEffect,useState } from 'react';
 import { useLocalStorage } from '../LocalStorage/Local';
 import firebase from '../Database/Database'
-import { Row,Col,Button } from 'react-bootstrap';
+import { Row,Col,Button, Container } from 'react-bootstrap';
 import { useHistory} from 'react-router-dom';
+import './UpdateStatus.css'
 
 const UpdateStatus = ({match}) => {
 
@@ -41,36 +42,39 @@ const UpdateStatus = ({match}) => {
           }
 
     return (  
-        <div>  
-            <h1>{data.sname}</h1>
-            <Row>
-                <Col><th>Date : </th><th>{data.fdate}</th></Col>
+        <div> 
+           
+            <h1 className="dname">{data.sname}</h1>
+            <Container className="dService">
+            <Row   className="dStatus">
+                <Col><th  >Date : </th><th>{data.fdate}</th></Col>
             </Row>
-            <Row>
-                <Col><th>Function Type : </th><th>{data.ftype}</th></Col>
+            <Row   className="dStatus">
+                <Col><th   >Function Type : </th><th>{data.ftype}</th></Col>
             </Row>
             { data.ftime ? 
-            <Row>
-            <Col><th>Function Time : </th><th>{data.ftime}</th></Col>
+            <Row   className="dStatus">
+            <Col ><th >Function Time : </th><th>{data.ftime}</th></Col>
             </Row>
             : 
             <p></p>}
             { data.venue ? 
-            <Row>
-            <Col><th>Venue : </th><th>{data.venue}</th></Col>
+            <Row   className="dStatus">
+            <Col><th  >Venue : </th><th>{data.venue}</th></Col>
             </Row>
             : 
             <p></p>}
             { data.nopeople ? 
             <Row>
-            <Col><th>Number of People : </th><th>{data.nopeople}</th></Col>
+            <Col><th   className="dStatus">Number of People : </th><th>{data.nopeople}</th></Col>
             </Row>
             : 
             <p></p>}
-            <Row>
-                <Col><th>Status : </th><th>{data.status}</th></Col>
+            <Row   className="dStatus">
+                <Col><th  >Status : </th><th>{data.status}</th></Col>
             </Row>
             <select
+            className="dStatus"
              id="dropdown" 
              value={state.statu}
              onChange={e => setstate(state=>({...state, statu: (e.target.value)}))}
@@ -79,8 +83,14 @@ const UpdateStatus = ({match}) => {
                         <option value="Accept">Accept</option>
                         <option value="Reject">Reject</option>
                         </select>
-            <Button onClick={chngstatus}>Change Status</Button>
+                        <Row>
+                            <Col>
+                            <Button className="btSer" onClick={chngstatus}>Change Status</Button>
+                            </Col>
+                        </Row>
+            
             <p>{state.eror}</p>
+            </Container> 
         </div>
     );
 }

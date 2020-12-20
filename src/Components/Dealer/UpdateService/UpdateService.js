@@ -1,13 +1,33 @@
 import React, { useState } from 'react';
 import './UpdateService.css'
-import {Form,Row,Col,Button} from 'react-bootstrap'
+import ImageUploader from 'react-images-upload';
+import {Form,Row,Col} from 'react-bootstrap'
 import { useHistory} from 'react-router-dom';
  import firebase from '../../Database/Database.js'
  import { useLocalStorage } from '../../LocalStorage/Local.js';
  import {firebaseApp} from '../../Database/Database.js'
+ import { Button } from '@material-ui/core';
+ import { makeStyles } from '@material-ui/core/styles';
+ import LoginIcon from '@material-ui/icons/FindInPage';
+ import DelIcon from '@material-ui/icons/Delete';
+ import UpIcon from '@material-ui/icons/Update';
 
+ const useSty = makeStyles({
+   root: {
+     background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+     border: 0,
+     borderRadius: 3,
+     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+     color: 'white',
+     height: 48,
+     padding: '0 30px',
+     '&:hover': {
+       color: 'black'
+   }
+   },
+ })
 const UpdateService = () => {
-
+    const classes = useSty();
     const history = useHistory();
   const [name, setName] = useLocalStorage('username', 'null');
   const [state , setstate] = useState({
@@ -121,26 +141,27 @@ const UpdateService = () => {
         <div>
                    {!state.ad ?
                    <div> 
-                   <Row>
-                   <Col><label>Enter Service Name</label></Col>
-                   <Col><input 
+                   <Row className="findservice">
+                   <Col><label className="Serlab">Enter Service Name</label></Col>
+                   <Col className="enterSer"><input 
                    type="text" 
                    placeholder="Enter Title"
                    value={state.sname}
             onChange={e => setstate({...state ,sname : e.target.value})}
             />
                    </Col>
-                   <Col><Button 
-               className="bton"
-               variant="primary" 
+                   </Row>
+                   <Row>
+                   <Col className="findservice"><Button 
+               className={classes.root} startIcon={<LoginIcon />}
                onClick={find}>Find Service</Button></Col>
                </Row> 
-               <Row><p id="eror">{state.erro}</p></Row>
+               <Row className="dataNotFound"><p >{state.erro}</p></Row>
                </div>
                : 
                
                <Form className="Add-service">
-               <Row>
+               <Row className="updateService">
                    <Col><label>Enter Service Name</label></Col>
                    <Col><input 
                    type="text" 
@@ -150,7 +171,7 @@ const UpdateService = () => {
             />
                    </Col>
                </Row>
-              <Row>
+              <Row className="updateService">
                   <Col><label>Description</label></Col>
                   <Col><textarea 
                   class="form-control" 
@@ -164,7 +185,7 @@ const UpdateService = () => {
                 <Col> 
                 </Col>
             </Row>
-            <Row>
+            <Row className="updateService">
                    <Col><label>Service Price</label></Col>
                    <Col><input 
                    type="text" 
@@ -174,26 +195,28 @@ const UpdateService = () => {
             />
                    </Col>
                </Row>
-               <Row>
-              {state.image ? <img width="200" height="200" src={state.image}/> : <p></p>}
-               </Row>
-               <Row>
-                <Col>
+               <Row  className="serBtn">
+                   <Col>{state.image ? <img width="200" height="200" src={state.image}/> : <p></p>}</Col>
+                   <Col>
                 <input type="file" onChange={onFileChange} />
                 </Col>
-            </Row>
-           <Row>
+              </Row>
+           <Row >
                <p id="eror">{state.erro}</p>
             </Row>
-               <Row>
-               <Button 
-               className="bton"
-               variant="primary" 
+               <Row className="serBtn">
+                   <Col>
+                   <Button 
+                className={classes.root} startIcon={<UpIcon />}
                onClick={onSubmit}>Update Service</Button>
-               <Button 
-               className="bton"
-               variant="primary" 
-               onClick={delet}>Delete Service</Button>
+             
+                   </Col>
+              <Col>
+              <Button
+              className={classes.root} startIcon={<DelIcon />}
+               onClick={delet} >Delete Service</Button>
+              </Col>
+             
            </Row>
            </Form>
            } 

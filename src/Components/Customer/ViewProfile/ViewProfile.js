@@ -35,42 +35,35 @@ const ViewProfile = () => {
         <Container className="View">
             <Row >
                 <Col>
-                    <h6>First Name</h6>
+                    <h6 className="viewAttri">First Name</h6>
                 </Col>
                 <Col>
-                    <p>{state.fname}</p>
+                    <p className="attriValue">{state.fname}</p>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <h6>Last Name</h6>
+                    <h6 className="viewAttri">Last Name</h6>
                 </Col>
                 <Col>
-                    <p>{state.lname}</p>
+                    <p className="attriValue">{state.lname}</p>
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <h6>Email</h6>
+                    <h6 className="viewAttri">Email</h6>
                 </Col>
                 <Col>
-                    <p>{state.email}</p>
+                    <p className="attriValue">{state.email}</p>
                 </Col>
             </Row>
-            <Row>
-                <Col>
-                    <h6>City</h6>
-                </Col>
-                <Col>
-                    <p>name....</p>
-                </Col>
-            </Row>
+            
             </Container>
-            <Container>
-            <Table  >
+            <Container className="viewtbl">
+            <Table striped   >
             <Link to="/Customer/UpdateProfile">
-                        <thead>
-                            <tr>
+                        <thead >
+                            <tr className="tbldata">
 
                                 <th>Address</th>
                                 <th>Contact Number</th>
@@ -78,7 +71,7 @@ const ViewProfile = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr className="tbldata2">
                                 <td>{state.address}</td>
                                 <td>{state.phn}</td>
                                 <td>{state.pass}</td>

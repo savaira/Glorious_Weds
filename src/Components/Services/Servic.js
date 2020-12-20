@@ -2,6 +2,7 @@ import React, { useEffect , useState } from 'react'
 import firebase from '../Database/Database'
 import { Container,Row,Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Servic.css'
 
 const Servic = ({match}) => {
     const[nodata , setnodata]= useState('');
@@ -30,19 +31,19 @@ const Servic = ({match}) => {
     
     return (  
         <div>
-        <h1>
+        <h1 className="serTitle">
             {match.params.service}
         </h1>
         {nodata ? <p>{nodata}</p> 
         :
-        <Container>
+        <Row >
         {aray.map((aray,i) => 
-            <Link to={`/ParticularService/${aray.sname}`}>
-            <tr key={i}><img width="300" height="300" src={aray.image}/></tr>
+            <Col><Link to={`/ParticularService/${aray.sname}`}>
+            <tr  key={i}><img width="300" height="300" src={aray.image}/></tr>
             <tr key={i}><h2>{aray.sname}</h2></tr>
-            </Link>
+            </Link></Col>
             )}
-        </Container>
+        </Row>
         }
         </div>
     );

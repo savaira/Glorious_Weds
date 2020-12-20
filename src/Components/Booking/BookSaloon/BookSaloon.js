@@ -1,12 +1,31 @@
 import React, { useState,useEffect } from 'react';
-import {Container,Form,Button} from 'react-bootstrap';
+import {Container,Form} from 'react-bootstrap';
 import './BookSaloon.css'
 import firebase from '../../Database/Database'
 import { useHistory} from 'react-router-dom';
 import { useLocalStorage } from '../../LocalStorage/Local';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import ShopIcon from '@material-ui/icons/ShoppingBasket';
 
+const useSty = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    marginTop:'10px',
+    marginLeft:'-70px',
+    padding: '0 30px',
+    '&:hover': {
+      color: 'black'
+  }
+  },
+});
 const BookSaloon = ({match}) => {
-
+  const classes = useSty();
   const [name, setName] = useLocalStorage('username', 'null');
   const history = useHistory();
   const [state , setstate] = useState({
@@ -59,7 +78,7 @@ const BookSaloon = ({match}) => {
       <Container className="book" >
       <Form>
 <Form.Group controlId="exampleForm.ControlInput1">
-<Form.Label>Function Date</Form.Label>
+<Form.Label className="tit">Function Date</Form.Label>
 <Form.Control 
 type="date"
 value={state.fdate}
@@ -67,7 +86,7 @@ onChange={e => setstate({...state, fdate: e.target.value })}
 />
 </Form.Group>
 <Form.Group controlId="exampleForm.ControlSelect2">
-<Form.Label>Function Type</Form.Label>
+<Form.Label className="tit">Function Type</Form.Label>
 <Form.Control 
 as="select"
 value={state.ftype}
@@ -83,7 +102,7 @@ onChange={e => setstate({...state, ftype: e.target.value })}
 </Form.Group>
 <p>{state.eror}</p>
 </Form>
-<Button className="btn-book" onClick={book}>Book Now</Button>
+<Button  onClick={book} className={classes.root} startIcon={<ShopIcon/>}>Book Now</Button>
       </Container>
       
   </div>

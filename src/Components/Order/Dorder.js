@@ -30,7 +30,7 @@ const Dorder = () => {
 
     return ( 
         <div>
-                <h1 className="ordername">Orders Placed</h1>
+                <h1 className="orderTitle">Orders Placed</h1>
                 <Container > 
                 <Table bordered >
                 <thead>

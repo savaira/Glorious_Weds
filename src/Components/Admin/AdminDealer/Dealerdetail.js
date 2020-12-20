@@ -1,11 +1,29 @@
 import React, { useState,useEffect} from 'react';
 import firebase from '../../Database/Database'
-import {Table,Button} from 'react-bootstrap'
+import {Table, Container} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import { useHistory} from 'react-router-dom';
-import {firebaseApp} from '../../Database/Database'
+import './Dealerdetail.css'
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import DelIcon from '@material-ui/icons/Delete';
 
+const useStyles = makeStyles({
+    root: {
+      background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+      border: 0,
+      borderRadius: 3,
+      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+      color: 'white',
+      height: 48,
+      padding: '0 30px',
+      '&:hover': {
+        color: 'black'
+    }
+    },
+  });
 const Dealerdetail = ({match}) => {
+    const classes = useStyles();
     const history = useHistory();
     const [aray , setaray] = useState([]);
 
@@ -29,12 +47,6 @@ const Dealerdetail = ({match}) => {
             snapshot.forEach(doc =>{
                 const db = firebase.collection('User').doc(doc.id).delete();
             });
-            const datab = firebase.collection('Services');
-            const snapsht = await datab.where('email', '==',`${match.params.profile}`).get();
-            snapsht.forEach(doc =>{
-                const storageRef = firebaseApp.storage().ref();
-                const fileRef = storageRef.child(doc.data().imgname).delete();
-            });
 
             aray.forEach(doc => {
                 const db = firebase.collection('Services').doc(doc.id).delete();
@@ -43,18 +55,19 @@ const Dealerdetail = ({match}) => {
         }
     return ( 
         <div>
-            <h1>Dealer Services</h1>
+            <h1 className="dealerdet">Dealer Services</h1>
             {aray.length == 0 ? <h2>No data </h2> :
             <div>
-            <Table bordered hover >
-            <thead>
+                <Container>
+                <Table bordered hover >
+            <thead className="tblHead">
                <tr>
                <th>Service No</th>
                <th>Service</th>
                <th>Service Name</th>
                </tr>
             </thead>
-            <tbody>
+            <tbody className="tbl-data">
             {aray.map((aray,i) => 
             <tr>
             <td key={i}>{i+1}</td>
@@ -64,7 +77,8 @@ const Dealerdetail = ({match}) => {
             )}
             </tbody>
             </Table>
-            <Button onClick={del}>Delete Dealer</Button>
+                </Container>
+            <Button className={classes.root} startIcon={<DelIcon />} onClick={del}>Delete Dealer</Button>
             </div>
         }
         </div>

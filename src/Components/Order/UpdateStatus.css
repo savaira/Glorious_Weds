@@ -1,0 +1,18 @@
+.dname{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #FF7B7B;
+    font-family: 'Heebo', sans-serif;
+}
+.dService{
+    text-align: center;
+    margin-left: 45%;
+}
+.dStatus{
+    margin-top: 2%;
+}
+.btSer{
+    margin-left: -90%;
+    margin-top: 2%;
+}

@@ -1,0 +1,33 @@
+.about{
+    font-size: 70px;
+    margin-top: 30px;
+    font-family: 'Heebo', sans-serif;
+  color:#FF7B7B;
+  text-align: left;
+  margin-left: 200px;
+}
+.aboutlines{
+    font-size: 18px;
+    margin-left: 175px;
+    margin-top: 30px;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+}
+.term{
+text-align: left;
+font-size: 22px;
+margin-left: 85px;
+font-weight: 700;
+font-family: 'Heebo', sans-serif;
+}
+.condi{
+    margin-top: 10px;
+    margin-left: 80px;
+    text-align: justify;
+    text-align: justify;
+    font-family: 'Rubik', sans-serif;
+}
+.condihov:hover{
+    background-color:white;
+    color: black;
+}

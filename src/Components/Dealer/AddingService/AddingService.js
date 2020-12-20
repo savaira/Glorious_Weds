@@ -1,12 +1,30 @@
 import React, { useState } from 'react';
 import './AddingService.css'
- import {Form,Row,Col,Button} from 'react-bootstrap'
+ import {Form,Row,Col} from 'react-bootstrap'
  import {firebaseApp} from '../../Database/Database.js'
  import { useHistory} from 'react-router-dom';
  import firebase from '../../Database/Database.js'
  import { useLocalStorage } from './../../LocalStorage/Local';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import LoginIcon from '@material-ui/icons/ControlPoint';
 
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    '&:hover': {
+      color: 'black'
+  }
+  },
+});
 const AddingService = () => {
+    const classes = useStyles();
   const history = useHistory();
   const [name, setName] = useLocalStorage('username', 'null');
   const [state , setstate] = useState({
@@ -87,11 +105,11 @@ const AddingService = () => {
     return ( 
         <div>
                 <Form className="Add-service">
-                    <Row>
-                        <Col>
-                        <label>Select Service</label>
+                    <Row className="serviceCol">
+                        <Col className="dropser2"  >
+                        <label className="serviceLabel">Select Service</label>
                         </Col>
-                        <Col>
+                        <Col className="dropser" >
                         <select 
                         id="dropdown" 
                         value={state.service}
@@ -108,9 +126,9 @@ const AddingService = () => {
                         </select>
                         </Col>
                     </Row>
-               <Row>
-                   <Col><label>Service Name</label></Col>
-                   <Col><input 
+               <Row className="serviceCol">
+                   <Col  ><label className="serviceLabel">Service Name</label></Col>
+                   <Col  ><input 
                    type="text" 
                    placeholder="Enter Title"
                    value={state.sname}
@@ -118,9 +136,9 @@ const AddingService = () => {
             />
                    </Col>
                </Row>
-              <Row>
-                  <Col><label>Description</label></Col>
-                  <Col><textarea 
+              <Row className="serviceCol">
+                  <Col  ><label className="serviceLabel">Description</label></Col>
+                  <Col  ><textarea 
                   class="form-control" 
                   rows="10"
                   value={state.description}
@@ -128,9 +146,9 @@ const AddingService = () => {
                   >
                   </textarea></Col>
               </Row>
-              <Row>
-                   <Col><label>Service Price</label></Col>
-                   <Col><input 
+              <Row className="serviceCol">
+                   <Col  ><label className="serviceLabel">Service Price</label></Col>
+                   <Col  ><input 
                    type="text" 
                    placeholder="Enter Price"
                    value={state.price}
@@ -140,17 +158,16 @@ const AddingService = () => {
                </Row>
             <Row>
 
-                <Col>
+                <Col className="serviceCol2" >
                 <input type="file" onChange={onFileChange} />
                 </Col>
             </Row>
            <Row>
                <p id="eror">{state.erro}</p>
             </Row>
-            <Row>
+            <Row id="bton">
                <Button 
-               className="bton"
-               variant="primary" 
+              className={classes.root}  startIcon={<LoginIcon />}  
                onClick={onSubmit}>Add Service</Button>
            </Row>
                 

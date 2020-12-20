@@ -1,3 +1,16 @@
 .tabl{
-    margin-top: 20px;
+    margin-top: 40px;
+}
+.tdata{
+    font-size: 25px;
+    padding: 60px;
+    margin-left: 12px;
+    color:black;
+    font-family: 'Roboto', sans-serif;
+}
+.tdata2{
+    color:darkcyan;
+    font-size: 16px;
+    font-family: 'Dancing Script', cursive,Reguar 400;
+    font-weight: 400;
 }

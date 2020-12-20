@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import firebase from '../../Database/Database'
 import {Table} from 'react-bootstrap'
-
+import './AdminCustomer.css'
 const Admincustomer = () => {
     const [aray , setaray] = useState([]);
 
@@ -22,9 +22,9 @@ const Admincustomer = () => {
 
     return (  
         <div>
-            <h1>Customer</h1>
+            <h1 className="adminCus">Customer</h1>
             <Table bordered hover >
-            <thead>
+            <thead className="tblHead">
                <tr>
                <th>Service No</th>
                <th>Name</th>
@@ -33,10 +33,10 @@ const Admincustomer = () => {
                <th>Phone No</th>
                </tr>
             </thead>
-            <tbody>
+            <tbody className="tbl-data">
             {aray.map((aray,i) => 
-            <tr><td key={i}>{i+1}</td>
-            <td key={i}>{aray.name}</td>
+            <tr ><td key={i}>{i+1}</td>
+            <td  key={i}>{aray.name}</td>
             <td key={i}>{aray.email}</td>
             <td key={i}>{aray.address}</td>
             <td key={i}>{aray.phn}</td>

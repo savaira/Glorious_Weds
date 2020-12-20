@@ -6,3 +6,30 @@
     margin-right: 300px;
     text-align: justify;
 }
+.findservice{
+margin-top: 4%;
+
+}
+.Serlab{
+    font-size: 18px;
+    font-family: 'Bebas Neue', cursive,Regular 400;
+}
+.enterSer{
+    margin-left: -40%;
+}
+.dataNotFound{
+    margin-left: 45%;
+    margin-top: 3%;
+    color: red;
+    font-size: 18px;
+    font-family: 'Courgette', cursive;
+}
+.updateService{
+    font-size: 20px;
+    margin-top: 3%;
+    font-family: 'Langar', cursive,Regular 400;
+}
+.serBtn{
+    margin-left: 15%;
+    margin-top: 3%;
+}

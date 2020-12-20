@@ -1,9 +1,27 @@
 import React, { useEffect,useState } from 'react';
 import firebase from '../Database/Database'
-import {Button} from 'react-bootstrap';
 import { useHistory} from 'react-router-dom';
+import './ParticularService.css'
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import ShopIcon from '@material-ui/icons/ShoppingBasket';
 
+const useStyles = makeStyles({
+  root: {
+    background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+    border: 0,
+    borderRadius: 3,
+    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+    color: 'white',
+    height: 48,
+    padding: '0 30px',
+    '&:hover': {
+      color: 'black'
+  }
+  },
+});
 const ParticularService = ({match}) => {
+    const classes = useStyles();
     const history = useHistory();
     const [state , setstate] = useState({
         sname : "",
@@ -43,11 +61,11 @@ const ParticularService = ({match}) => {
     }
     return ( 
         <div>
-             <h1 style={{marginTop:"20px"}}>{state.sname}</h1>
+             <h1 style={{marginTop:"20px"}} className="serName">{state.sname}</h1>
              <img width="400" height="400" src={state.image}/>
             <p>{state.description}</p>
-            <h5>{state.price}</h5>
-            <Button onClick={book}>Book Now</Button>
+            <h5> Rs.{state.price}</h5>
+            <Button className={classes.root} startIcon={<ShopIcon />} onClick={book}>Book Now</Button>
         </div>
      );
 }
