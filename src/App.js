@@ -22,7 +22,14 @@ import BookDecorPhotoCar from './Components/Booking/BookDecorPhotoCar/BookDecorP
 import BookHallCatEvent from './Components/Booking/BookHallCatEvent/BookHallCatEvent';
 import Dorder from './Components/Order/Dorder';
 import UpdateStatus from './Components/Order/UpdateStatus';
-
+import AboutUs from './Components/AboutUs/AboutUs';
+import Contact from './Components/Contact/Contact';
+import Payment from './Components/Payment/Payment';
+import OrderDetail from './Components/Order/OrderDetail';
+import Map, { MapContainer } from './Components/Map/Map';
+import TextEditor from './Components/TextEditor/TextEditor';
+import ViewTemplates from './Components/DesignCard/ViewTemplates/ViewTemplates';
+import InputData from './Components/DesignCard/InputData/InputData';
 
 function App() {
   return (
@@ -31,6 +38,12 @@ function App() {
       <Navigation/>
       <div className="content">
           <Switch>
+            <Route path="/ViewTemplates"><ViewTemplates/></Route>
+              <Route path="/OrderDetail/:id" component={OrderDetail}/>
+              <Route path="/Services/:search" component={Services}/>
+              <Route path="/Payment"><Payment/></Route>
+              <Route path="/AboutUs"><AboutUs/></Route>
+              <Route path="/Contact"><Contact/></Route>
               <Route path="/Order"><Order/></Route>
               <Route  path="/UpdateStatus/:id" component={UpdateStatus}/>
               <Route  path="/BookHallCatEvent/:sername" component={BookHallCatEvent}/>
@@ -46,7 +59,7 @@ function App() {
               <Route  path="/Forgot" > <Forgot/></Route>
               <Route  path="/SignUp" > <SignUp/> </Route>
               <Route  path="/Servic/:service" component={Servic}/>
-              <Route  path="/" > <Home/> </Route>
+              <Route  path="/" ><Home/></Route>
           </Switch>
           </div>
       <Footer/>

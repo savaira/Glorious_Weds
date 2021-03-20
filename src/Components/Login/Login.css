@@ -1,7 +1,18 @@
 .logi{
     padding-top: 30px;
-    background-color:#0099E5;;
+    background-color:#9668b0;
     font-weight: bold;
-    margin-left: 500px;
+    border:12px solid #d8d8d8;
     padding-bottom: 30px;
+}
+@media screen and (max-width:600px){
+    .logi{
+        margin-left: 100px;
+        margin-right: 50px;
+    }
+}
+@media screen and (min-width:600px){
+    .logi{
+        margin-left: 500px;
+    }
 }

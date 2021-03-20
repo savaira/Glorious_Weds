@@ -9,10 +9,11 @@
 }
 .contain{
     width: 500px;
-    height: 500px;
+    height: 530px;
     margin-top: 30px;
-    background-color: #0099E5;
+    background-color: #9668b0;
     padding: 20px;
+    border:12px solid #d8d8d8;
 }
 .icon{
     margin-left: 30%;

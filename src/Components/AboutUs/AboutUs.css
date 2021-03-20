@@ -1,8 +1,8 @@
 .about{
     font-size: 70px;
     margin-top: 30px;
-    font-family: 'Heebo', sans-serif;
-  color:#FF7B7B;
+    font-family: 'Great Vibes', cursive;
+  color:#552c6c;
   text-align: left;
   margin-left: 200px;
 }
@@ -11,7 +11,8 @@
     margin-left: 175px;
     margin-top: 30px;
     text-align: justify;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+    color: #7d7d7d;
 }
 .term{
 text-align: left;
@@ -19,15 +20,26 @@ font-size: 22px;
 margin-left: 85px;
 font-weight: 700;
 font-family: 'Heebo', sans-serif;
+color: #9668b0;
+
 }
 .condi{
     margin-top: 10px;
     margin-left: 80px;
     text-align: justify;
     text-align: justify;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+    color: #7d7d7d;
 }
 .condihov:hover{
     background-color:white;
     color: black;
+}
+.condition{
+    margin-left: 60px;
+}
+@media screen and (max-width:700px){
+    .condition{
+        font-size:15px;
+    }
 }

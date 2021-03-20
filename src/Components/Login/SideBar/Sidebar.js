@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./Sidebar.css";
-
+import {Link} from 'react-router-dom';
 class Sidebar extends Component {
+  
   state = {
     service: [
       "Car Rental",
@@ -19,11 +20,11 @@ class Sidebar extends Component {
         <h1 className="deal">We Deals in</h1>
         <ul>
           {this.state.service.map((service) => (
-            <li className="servicelist"
+    <Link style={{textDecoration:"none"}} to={`/Servic/${service}`}><li className="servicelist"
             key={service} 
-           href="#features">
+            >
               {service}
-            </li>
+            </li></Link>
           ))}
         </ul>
       </div>

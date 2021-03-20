@@ -2,17 +2,22 @@
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    color: #FF7B7B;
-    font-family: 'Heebo', sans-serif;
+    color: #552c6c;
+    font-family:'Great Vibes', cursive;
 }
 .dService{
     text-align: center;
-    margin-left: 45%;
+    margin-left: 40%;
 }
 .dStatus{
     margin-top: 2%;
+    color: #9668b0;
+    font-family: 'Langar', cursive,Regular 400
 }
-.btSer{
-    margin-left: -90%;
-    margin-top: 2%;
+
+.dstat{
+    color:#7d7d7d;
+    font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+    font-weight: lighter;
+    padding-left: 2%;
 }

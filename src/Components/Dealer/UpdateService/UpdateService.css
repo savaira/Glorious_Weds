@@ -12,7 +12,11 @@ margin-top: 4%;
 }
 .Serlab{
     font-size: 18px;
-    font-family: 'Bebas Neue', cursive,Regular 400;
+    font-family: 'Great Vibes', cursive;
+    color: #9668b0;
+}
+.searchService{
+    border: 3px solid black;
 }
 .enterSer{
     margin-left: -40%;

@@ -1,14 +1,16 @@
 .serv{
-    color: white;
+    color: #9668b0;
     font-family: 'Permanent Marker', cursive;
 }
 .servlist{
     font-family: 'Playfair Display', serif;
     list-style: none;
-    color: rgb(27, 25, 25);
+    color:black;
     font-weight: 550;
     margin-left: -5px;
+   
 }
 .servlist:hover{
-    color:white
+    color:#9668b0;
+    text-decoration: none;
 }

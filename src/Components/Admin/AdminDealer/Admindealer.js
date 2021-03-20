@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import firebase from '../../Database/Database'
-import {Table} from 'react-bootstrap'
+import {Container, Table} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import './Admindealer.css'
 const Admindealer = () => {
@@ -24,7 +24,8 @@ const Admindealer = () => {
     return (  
         <div>
             <h1 className="adminCus">Dealer</h1>
-            <Table bordered hover >
+          <Container>
+            <Table responsive="sm" bordered hover >
             <thead className="tblHead">
                <tr>
                <th>Ser No</th>
@@ -38,7 +39,7 @@ const Admindealer = () => {
             {aray.map((aray,i) => 
             <tr>
             <td key={i}>{i+1}</td>
-            <Link to={`/Admin/Admindealer/${aray.email}`}><td key={i}>{aray.name}</td></Link>
+            <Link style={{textDecoration:"none",color:"black"}} to={`/Admin/Admindealer/${aray.email}`}><td key={i}>{aray.name}</td></Link>
             <td key={i}>{aray.email}</td>
             <td key={i}>{aray.address}</td>
             <td key={i}>{aray.phn}</td>
@@ -46,7 +47,8 @@ const Admindealer = () => {
             )}
             </tbody>
             </Table>
-
+            </Container>
+           
         </div>
     );
 }

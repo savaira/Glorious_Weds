@@ -2,17 +2,26 @@
     text-align: center;
     font-size: 70px;
     font-weight: bold;
-    color: #FF7B7B;
-    font-family: 'Heebo', sans-serif;
+    color: #552c6c;
+    font-family: 'Great Vibes', cursive;
   }
   #dropdown{
     text-align: center;
     margin-left: -90%;
   }
   .drop{
-    font-size: 17px;
+   
     font-family: 'Noto Sans JP', sans-serif;
     margin-left: 25%;
   }
- 
+  @media screen and (max-width:599px){
+   .adminSelector{
+    font-size: 10px;
+   }
+ }
+ @media screen and (min-width:600px){
+  .adminSelector{
+  font-size: 17px;
+  }
+} 
   

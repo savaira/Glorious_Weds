@@ -1,0 +1,33 @@
+.navi{
+    padding-left: 23px;
+    font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+    color: #dfc2f0;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 3px #7a4d93;
+   
+}
+
+.navi:hover{
+    color: white;
+    text-decoration: none;
+}
+.navi2{
+    border-bottom:1px solid #875c9f;
+    background: #9668b0;
+    line-height: 30px;
+    display: block;
+  
+}
+.navi2:hover{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+.bar{
+    background-color: #9668b0;
+
+}
+.navi--dealer{
+    color:white !important;
+    /* background: #000; */
+}

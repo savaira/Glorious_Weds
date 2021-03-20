@@ -2,10 +2,25 @@
   text-align: center;
   font-size: 50px;
   font-weight: bold;
-  color: #FF7B7B;
-  font-family: 'Heebo', sans-serif;
+  color: #552c6c;
+  font-family:  'Great Vibes', cursive;
   }
  .tb tr:hover{
       color:white;
       background-color:skyblue;
   }
+.tb{
+  color: #9668b0;
+}
+.tb2{
+  color: #7d7d7d;
+  font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+}
+.status{
+  color:#552c6c;
+  font-weight: 600;
+}
+.status:hover{
+  font-size:20px ;
+  color: #9668b0;
+}

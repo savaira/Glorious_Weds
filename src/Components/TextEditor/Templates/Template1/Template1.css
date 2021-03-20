@@ -1,0 +1,34 @@
+.design1{
+    height:10.5cm ;
+    width: 22cm;
+    background-color: maroon;
+}
+.dgpic1{
+    margin-left:-300px;
+}
+.dgpic2{
+margin-left:680px;
+margin-bottom: -340px;
+}
+.fatherName{
+    margin-top: 40px;
+    background-color: maroon;
+    margin-left: -380px;
+    border:none;
+    color:goldenrod;
+    font-size: 25px;
+    font-weight: bold;
+}
+.fatherName:hover{
+    border: dotted 2px gray;
+}
+.inviteArea{
+    margin-top: -170px;
+    background-color: maroon;
+    color:goldenrod;
+    font-size: 18px;
+    border: none;
+}
+.inviteArea:hover{
+    border: dotted 2px gray;
+}

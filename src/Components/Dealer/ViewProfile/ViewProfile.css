@@ -3,7 +3,9 @@
     }
     .viewAttri{
         font-size: 20px;
-        font-family: 'Langar', cursive,Regular 400;
+        font-family: 'Great Vibes', cursives;
+        color:#552c6c;
+        font-weight: 600;
     }
     .viewtbl{
         margin-top: 75px;
@@ -12,17 +14,24 @@
     .attriValue{
         margin-left:-459px;
         font-family: 'Courgette', cursive;
+        color: #7d7d7d;
     }
     .tbldata{
         font-size: 25px;
         padding: 60px;
         margin-left: 12px;
-        color:black;
+        color:#9668b0;
         font-family: 'Roboto', sans-serif;
     }
     .tbldata2{
-        color:darkcyan;
+        color:#7d7d7d;
         font-size: 16px;
         font-family: 'Dancing Script', cursive,Reguar 400;
         font-weight: 400;
     }
+.tbldata2:hover{
+    text-decoration:none;
+    color:#9668b0;
+    font-weight: 400;
+    font-size:18px ;
+}

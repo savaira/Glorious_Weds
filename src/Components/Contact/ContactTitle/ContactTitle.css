@@ -1,12 +1,13 @@
 .Conta{
     font-size: 70px;
     margin-top: 30px;
-    font-family: 'Heebo', sans-serif;
-  color:#FF7B7B;
+    font-family: 'Great Vibes', cursive;
+  color:#552c6c;
 }
 .Contalines{
 font-size: 20px;
 font-weight: 450;
 margin-top: 20px;
-font-family: 'Quicksand', sans-serif;
+font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+color: #7d7d7d;
 }

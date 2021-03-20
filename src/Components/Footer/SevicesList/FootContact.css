@@ -1,11 +1,20 @@
 .contact{
     width: 20px;
     height: 20px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .details{
     font-family: 'Permanent Marker', cursive;
     font-weight: 400;
-    color:white;
-    margin-left: -200px;
+    color:#9668b0;
+    margin-left:10px;
+   
 }
+/* @media(max-width:1500px){
+    .details{
+        font-size: 10px;
+    }
+    .contact{
+        width:5px;
+    }
+} */

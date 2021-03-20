@@ -14,7 +14,7 @@ import { useHistory} from 'react-router-dom';
 
  const useSty = makeStyles({
    root: {
-     background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+     background: 'linear-gradient(45deg, #A52A2A 30%, #00008B 90%)',
      border: 0,
      borderRadius: 3,
      boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
@@ -144,6 +144,7 @@ const UpdateService = () => {
                    <Row className="findservice">
                    <Col><label className="Serlab">Enter Service Name</label></Col>
                    <Col className="enterSer"><input 
+                   className="searchService"
                    type="text" 
                    placeholder="Enter Title"
                    value={state.sname}
@@ -162,8 +163,9 @@ const UpdateService = () => {
                
                <Form className="Add-service">
                <Row className="updateService">
-                   <Col><label>Enter Service Name</label></Col>
+                   <Col><label className="Serlab">Enter Service Name</label></Col>
                    <Col><input 
+                   className="searchService"
                    type="text" 
                    placeholder="Enter Title"
                    value={state.sname}
@@ -172,7 +174,7 @@ const UpdateService = () => {
                    </Col>
                </Row>
               <Row className="updateService">
-                  <Col><label>Description</label></Col>
+                  <Col><label className="Serlab">Description</label></Col>
                   <Col><textarea 
                   class="form-control" 
                   rows="10"
@@ -186,8 +188,9 @@ const UpdateService = () => {
                 </Col>
             </Row>
             <Row className="updateService">
-                   <Col><label>Service Price</label></Col>
+                   <Col><label className="Serlab">Service Price</label></Col>
                    <Col><input 
+                   className="searchService"
                    type="text" 
                    placeholder="Enter Title"
                    value={state.price}
@@ -196,7 +199,7 @@ const UpdateService = () => {
                    </Col>
                </Row>
                <Row  className="serBtn">
-                   <Col>{state.image ? <img width="200" height="200" src={state.image}/> : <p></p>}</Col>
+                   <Col>{state.image ? <img width="200" height="200" style={{border:'2px solid black'}} src={state.image}/> : <p></p>}</Col>
                    <Col>
                 <input type="file" onChange={onFileChange} />
                 </Col>

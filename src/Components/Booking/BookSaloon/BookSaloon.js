@@ -10,14 +10,14 @@ import ShopIcon from '@material-ui/icons/ShoppingBasket';
 
 const useSty = makeStyles({
   root: {
-    background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+    background: 'linear-gradient(45deg,#A52A2A 30%, #00008B 90%)',
     border: 0,
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
     height: 48,
     marginTop:'10px',
-    marginLeft:'-70px',
+    marginLeft:'-100px',
     padding: '0 30px',
     '&:hover': {
       color: 'black'
@@ -35,7 +35,8 @@ const BookSaloon = ({match}) => {
     ftype:"",
     eror:"",
     status:"Pending",
-    sname:""
+    sname:"",
+    price:""
     });
 
     useEffect(async() => {
@@ -45,7 +46,8 @@ const BookSaloon = ({match}) => {
       snapshot.forEach(doc => {
           setstate({...state,
                demail:doc.data().email,
-               sname:(match.params.sername)
+               sname:(match.params.sername),
+               price:doc.data().price
               });    
           });
     },[]);
@@ -65,7 +67,9 @@ const BookSaloon = ({match}) => {
          sname:state.sname,
          cemail:state.cemail,
          demail:state.demail,
-         status:state.status
+         status:state.status,
+         price:state.price,
+         payment:""
          })
         setstate({...state, eror:""})
         history.push('/Order');
@@ -102,9 +106,9 @@ onChange={e => setstate({...state, ftype: e.target.value })}
 </Form.Group>
 <p>{state.eror}</p>
 </Form>
-<Button  onClick={book} className={classes.root} startIcon={<ShopIcon/>}>Book Now</Button>
+
       </Container>
-      
+      <Button  onClick={book} className={classes.root} startIcon={<ShopIcon/>}>Book Now</Button>
   </div>
         
      );

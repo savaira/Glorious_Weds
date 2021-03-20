@@ -8,6 +8,8 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
+  
+ 
     <div className="foot">
       <div className="row p-4">
         <div className="col fcon">
@@ -22,6 +24,7 @@ const Footer = () => {
       </div>
       <Copyright />
     </div>
+   
   );
 };
 

@@ -3,7 +3,10 @@ import './Glorious.css'
 
 const Glorious = () => {
     return (  
-        <h3 className="gw"> Glorious Weds</h3>
+        <div >
+            <h3 className="gw"> Glorious Weds</h3>
+        </div>
+        
     );
 }
  

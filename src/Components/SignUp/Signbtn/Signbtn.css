@@ -4,3 +4,7 @@
     font-weight: 700;
     font-family: 'Bebas Neue', cursive; 
 }
+.reg:hover{
+    text-decoration: none;
+    color:blueviolet;
+}

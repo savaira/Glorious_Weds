@@ -1,6 +1,10 @@
 .foot{
-    background-color: #FF7B7B;
-    margin-top: 20px;
+    background-color: #F9F7F1;
+    margin-top: 30px;
+    border-top-style: dotted;
+    border-width: thick;
+    padding: 15px;
+    
   }
   .fcon{
       text-align: left;

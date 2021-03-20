@@ -10,7 +10,7 @@ const Login = () => {
     <div>
         <LoginText/>
         <Row>
-        <Col className="logi col-4">
+        <Col className="logi ">
           <LoginForm/>
         </Col>
         <Col>
@@ -20,5 +20,5 @@ const Login = () => {
         </div>
   );
 };
-
+//col-4
 export default Login;

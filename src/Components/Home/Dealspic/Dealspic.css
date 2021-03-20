@@ -2,11 +2,20 @@
     margin-left: 30px;
     margin-top: 40px;
     width:350px;
+    border: 3px solid black
   }
   .services-link{
     margin-left: 50px;
-    color: black;
+    color:#7d7d7d ;
     font-weight: 700;
     font-family: 'Teko', sans-serif;
     
+  }
+  .services:hover{
+    border-radius: 50%;
+  
+  }
+  .services-link:hover{
+    text-decoration: none;
+    color: blueviolet;
   }

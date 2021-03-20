@@ -4,7 +4,7 @@ import firebase from '../../Database/Database'
 import SignUp from './../../SignUp/SignUp';
 import {Link} from 'react-router-dom';
 import { useLocalStorage } from '../../LocalStorage/Local';
-import loginpic from './login.png';
+import loginpic from './login2.png';
 
 const SignText = () => {
     const [name, setName] = useLocalStorage('username', 'null');

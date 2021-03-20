@@ -16,7 +16,12 @@
 }
 .serviceLabel{
     font-size: 20px;
-    font-family: 'Langar', cursive,Regular 400;
+    font-family: 'Great Vibes', cursive;
+    color: #9668b0;
+    font-weight: 400;
+}
+.addDetail{
+    border:3px solid black;
 }
 .serviceCol{
     margin-left: 10%;

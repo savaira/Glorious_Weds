@@ -38,9 +38,9 @@ const Servic = ({match}) => {
         :
         <Row >
         {aray.map((aray,i) => 
-            <Col><Link to={`/ParticularService/${aray.sname}`}>
-            <tr  key={i}><img width="300" height="300" src={aray.image}/></tr>
-            <tr key={i}><h2>{aray.sname}</h2></tr>
+          <Col sm={4} ><Link style={{textDecoration:"none"}} to={`/ParticularService/${aray.sname}`}>
+            <tr  key={i}><img width="300" height="300" className="servicePic" src={aray.image}/></tr>
+            <tr  key={i}><h3 className="serviceName">{aray.sname}  </h3></tr>
             </Link></Col>
             )}
         </Row>

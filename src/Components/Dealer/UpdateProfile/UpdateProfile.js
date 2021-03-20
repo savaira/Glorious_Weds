@@ -8,9 +8,9 @@ import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import UpdateIcon from '@material-ui/icons/Update';
 
-const useStyle = makeStyles({
+const useStyles = makeStyles({
     root: {
-      background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+      background: 'linear-gradient(45deg, #A52A2A 30%, #00008B 90%)',
       border: 0,
       borderRadius: 3,
       boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
@@ -22,9 +22,9 @@ const useStyle = makeStyles({
     }
     },
   });
-
+  
 const UpdateProfile = () => {
-    const classes = useStyle();
+    const classes = useStyles();
     const [name, setName] = useLocalStorage('username', 'null');
     const [state , setstate] = useState({
         phn : "",
@@ -85,7 +85,7 @@ const UpdateProfile = () => {
             pass : state.npass
             });
        
-            history.push("/Dealer/ViewProfile")
+            history.push("/Customer/ViewProfile")
        };
 
     return ( 
@@ -99,6 +99,7 @@ const UpdateProfile = () => {
                         <Row>
                         <Col>
                             <input 
+                            className="editData"
                             value={state.address}
                             onChange={e => setstate({...state ,address : e.target.value})}
                             placeholder={state.address}
@@ -115,6 +116,7 @@ const UpdateProfile = () => {
                         <Row>
                         <Col>
                             <input 
+                            className="editData"
                             value={state.phn}
                             onChange={e => setstate({...state ,phn : e.target.value})}
                             type="text"
@@ -130,7 +132,7 @@ const UpdateProfile = () => {
                         </Row>
                         <Row>
                             <Col>
-                            <label>{state.pass}</label>
+                            <input className="editData" type="text"placeholder={state.pass}/>
                             </Col>
                         </Row>
                     <Row>
@@ -141,6 +143,7 @@ const UpdateProfile = () => {
                         <Row>
                         <Col>
                             <input 
+                            className="editData"
                             value={state.npass}
                             onChange={e => setstate({...state ,npass : e.target.value})}
                             type="Password" 
@@ -158,6 +161,7 @@ const UpdateProfile = () => {
                         <Row>
                         <Col>
                             <input 
+                            className="editData"
                             value={state.cnpass}
                             onChange={e => setstate({...state ,cnpass : e.target.value})}
                             type="Password" 
@@ -168,7 +172,7 @@ const UpdateProfile = () => {
                   </Row>
                   <p className="tex">{state.erro}</p>
                   </Container>
-                  <Button className={classes.root} startIcon={<UpdateIcon />} onClick={update}>Update</Button>
+                  <Button className={classes.root} startIcon={<UpdateIcon />}onClick={update}>Update</Button>
                   </div>
      );
 }

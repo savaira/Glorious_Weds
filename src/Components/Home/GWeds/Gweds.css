@@ -1,6 +1,25 @@
-.home-head {
-  font-size: 120px;
+/* .home-head {
+  margin-top: -200px;
   font-weight: bolder;
   color: #FF7B7B;
   font-family: 'Courgette', cursive;
+} */
+#homePg {
+  font-family: 'Arial Black';
+  margin-top: -230px;
+  
+  color: #8a898a;
+  text-align: center;
 }
+@media screen and (max-width:872px){
+  #homePg{
+    font-size:45px;
+    
+  }
+    }
+  @media screen and (min-width:873px){
+      #homePg{
+        font-size:94px;
+        
+      }
+        }

@@ -5,3 +5,13 @@
 .tbl-data{
     font-family: 'Langar', cursive;
 }
+/* @media screen and (max-width:599px){
+    .tableResponse{
+     font-size: 10px;
+    }
+  }
+  @media screen and (min-width:600px){
+   .adminSelector{
+   font-size: 17px;
+   }
+ }  */

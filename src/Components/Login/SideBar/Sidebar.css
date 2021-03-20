@@ -8,19 +8,22 @@
  width: 250px;
  height: 40px;
  font-family: 'Satisfy', cursive;
- background-color: #6495ED;
+ background-color: #9668b0;
  margin-top: 10px;
+ text-decoration: none;
+ color: black;
 }
 .deal{
     font-size: 30px;
     text-align:right;
     margin-right: 88px;
-    font-family: 'Lobster', cursive;
+    font-family: 'Great Vibes', cursive;
+    color: #552c6c;
 }
 .side{
   align-content: center;
 }
 li:hover{
   color: white;
-  background-color:#FF7B7B;
+  background-color:none;
 }

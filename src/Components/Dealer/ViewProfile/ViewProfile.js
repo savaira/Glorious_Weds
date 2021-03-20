@@ -34,10 +34,10 @@ const ViewProfile = () => {
         <div>
         <Container className="View">
             <Row >
-                <Col>
+                <Col class="col-xs-4">
                     <h6 className="viewAttri">First Name</h6>
                 </Col>
-                <Col>
+                <Col class="col-xs-9">
                     <p className="attriValue">{state.fname}</p>
                 </Col>
             </Row>
@@ -68,7 +68,7 @@ const ViewProfile = () => {
             </Container>
             <Container className="viewtbl">
             <Table  >
-            <Link to="/Dealer/UpdateProfile">
+            <Link to="/Dealer/UpdateProfile" style={{ textDecoration: 'none' }}>
                         <thead>
                             <tr className="tbldata">
 

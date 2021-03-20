@@ -3,6 +3,7 @@ import './Order.css'
 import { Container,Table } from 'react-bootstrap';
 import { useLocalStorage } from '../LocalStorage/Local';
 import firebase from '../Database/Database'
+import { Link } from 'react-router-dom';
 
 const Order = () => {
 
@@ -18,7 +19,8 @@ const Order = () => {
                 {
                 sname:doc.data().sname,
                 status:doc.data().status,
-                fdate:doc.data().fdate
+                fdate:doc.data().fdate,
+                id:doc.id
             }
             ]));  
             });
@@ -42,7 +44,7 @@ const Order = () => {
     <tr className="tb">
         <td key={i}>{i+1}</td>
         <td key={i}>{state.fdate}</td>
-        <td key={i}>{state.sname}</td>
+        <Link style={{textDecoration:"none",padding:"20px"}}to={`/OrderDetail/${state.id}`}><td key={i} className="statusOrder">{state.sname}</td></Link>
         <td key={i}>{state.status}</td>
     </tr>)}
   </tbody>

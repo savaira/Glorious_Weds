@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import './Services.css'
-class Services extends Component {
-  state ={
-    footlink : ["Design Card","Stage Decor","About Us","Contact Us"]
-  };
-  render(){
-    return ( 
-        <div class="container-fluid text-center text-md-left">
-          <h5 class="text-uppercase" className="serv">Links</h5>
-            <ul class="list-unstyled" >
-              {this.state.footlink.map(footlink => <li key={footlink}><a  className="servlist" href="#!">{footlink}</a></li>)}
-            </ul>
-        </div>
-     );
-    }
+import { Link } from 'react-router-dom';
+
+const Services = () => {
+  const navb=[
+    {name : "Design Cards" , lnk : "/ViewTemplates"},
+    {name : "Stage Decor" , lnk : "#features"},
+    {name : "About Us" , lnk : "/AboutUs"},
+    {name : "Contact Us" , lnk : "/Contact"}
+];
+  return ( 
+    <div class="container-fluid text-center text-md-left">
+      <h5 class="text-uppercase" className="serv">Links</h5>
+        <ul class="list-unstyled" >
+        {navb.map(navb =>
+                    <Link className="servlist" key={navb} to={navb.lnk} ><li>{navb.name}</li></Link>)}
+        </ul>
+    </div>
+ );
 }
  
 export default Services;

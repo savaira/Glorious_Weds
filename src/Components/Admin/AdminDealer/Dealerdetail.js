@@ -10,7 +10,7 @@ import DelIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles({
     root: {
-      background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+      background: 'linear-gradient(45deg, #A52A2A 30%, #00008B 90%)',
       border: 0,
       borderRadius: 3,
       boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',

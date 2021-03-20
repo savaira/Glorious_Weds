@@ -4,7 +4,10 @@
     font-family: 'Heebo', sans-serif;
 }
 .copy{
-    color: white;
+    color: #9668b0;
     font-weight: 500;
     font-family: 'Ubuntu', sans-serif;
+}
+.web:hover{
+    text-decoration: none;
 }

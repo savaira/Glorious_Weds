@@ -1,10 +1,22 @@
-.servicesDisp{
+/* .servicesDisp{
     padding-left: 50%;
-}
+} */
 .serTitle{
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    color: #FF7B7B;
-    font-family: 'Heebo', sans-serif;
+    color:  #552c6c;
+    font-family: 'Great Vibes', cursive;
+}
+.servicePic{
+    border:5px solid gray;
+    margin:5%;
+}
+.serviceName{
+    color:#9668b0;
+    text-align: center;
+}
+.serviceName:hover{
+    color: black;
+    text-decoration: none;
 }

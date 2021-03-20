@@ -10,14 +10,14 @@ import ShopIcon from '@material-ui/icons/ShoppingBasket';
 
 const useSty = makeStyles({
   root: {
-    background: 'linear-gradient(45deg, #C71585 30%, #FF8E53 90%)',
+    background: 'linear-gradient(45deg, #A52A2A 30%, #00008B 90%)',
     border: 0,
     borderRadius: 3,
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
     height: 48,
     marginTop:'10px',
-    marginLeft:'-70px',
+    marginLeft:'-100px',
     padding: '0 30px',
     '&:hover': {
       color: 'black'
@@ -37,7 +37,8 @@ const BookCarRental = ({match}) => {
     eror:"",
     status:"Pending",
     sname:"",
-    venue:""
+    venue:"",
+    price:""
     });
 
     useEffect(async() => {
@@ -46,8 +47,9 @@ const BookCarRental = ({match}) => {
       
       snapshot.forEach(doc => {
           setstate({...state,
-               demail:doc.data().email,
-               sname:(match.params.sername)
+            demail:doc.data().email,
+            sname:(match.params.sername),
+            price:doc.data().price
               });    
           });
     },[]);
@@ -71,7 +73,9 @@ const BookCarRental = ({match}) => {
          cemail:state.cemail,
          demail:state.demail,
          status:state.status,
-         venue:state.venue
+         venue:state.venue,
+         price:state.price,
+         payment:""
          })
         setstate({...state, eror:""})
         history.push('/Order');

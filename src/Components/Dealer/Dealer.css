@@ -16,10 +16,13 @@
   font-weight:600;
  margin-top: 28px;
  font-family: 'Noto Sans JP', sans-serif ,Regualr 400;
+ color:#dfc2f0;
   }
+ 
   .sbar3:hover{
+    
     color:black;
-    background-color: white;
+    background-color: #dfc2f0;
   }
 .sbar3{
   margin-top: 12px;

@@ -1,7 +1,8 @@
 .adminCus{
     text-align:justify;
-    font-family: 'Kanit', sans-serif,Regular 400;
+    font-family: 'PT Sans Narrow', Tahoma, sans-serif;
     margin-bottom: 5%;
+    color: #9668b0;
  
 }
 .tblHead{
@@ -11,3 +12,14 @@
 .tbl-data{
     font-family: 'Langar', cursive;
 }
+@media screen and (max-width:599px){
+    .adminCus{
+     font-size: 30px;
+     margin-left: 20%;
+    }
+  }
+  @media screen and (min-width:600px){
+   .adminCus{
+   font-size: 50px;
+   }
+ } 

@@ -2,6 +2,22 @@
     text-align: center;
     font-size: 50px;
     font-weight: bold;
-    color: #FF7B7B;
-    font-family: 'Heebo', sans-serif;
+    color: #552c6c;
+    font-family: 'Great Vibes', cursive;
+}
+.servPic{
+    border: 5px solid gray;
+    margin: 3%;
+}
+.servDes{
+    color:#7d7d7d;
+    font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+    line-height: 22px;
+    text-align: justify;
+    margin: 2%;
+}
+.servPrice{
+    color:#9668b0;
+    font-family: 'PT Sans Narrow', Tahoma, sans-serif;
+    font-weight: 400;
 }

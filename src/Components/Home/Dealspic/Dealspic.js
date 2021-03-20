@@ -9,11 +9,17 @@ import event from './event.jpg'
 import saloon from './saloon.jpg'
 import decor from './decor.jpg'
 import {Link} from 'react-router-dom'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init({
+  offset:500,
+  duration:1000
+});
 
 const Dealspic = () => {
     return ( 
-        <div>
-    <Row>
+        <div  data-aos="zoom-out-up">
+   <Row>
    <Col>
    <Link to="/Servic/Car Rental"><img src={car} className="services" /></Link>
    <br></br>
@@ -34,7 +40,7 @@ const Dealspic = () => {
    <Link className="services-link" to="/Servic/Decorator">Decorators</Link>
    </Col>
  </Row>
- <Row>
+ <Row >
  <Col>
  <Link to="/Servic/Event Manager">
    <img src={event} className="services" style={{height: '230px'}} />
@@ -66,7 +72,8 @@ const Dealspic = () => {
    <Link className="services-link" to="/Servic/Wedding Hall">Wedding Halls</Link>
    </Col>
  </Row>
-        </div>
+
+</div>
      );
 }
  

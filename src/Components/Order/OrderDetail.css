@@ -1,0 +1,24 @@
+.OdDet{
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #552c6c;
+    font-family:  'Great Vibes', cursive;
+}
+.OdName{
+    text-align: center;
+    margin-left: 40%;
+    margin-top: 4%;
+}
+.OdVal{
+    color: #7d7d7d;;
+font-weight: 200;
+    padding-left: 10px;
+    font-family: 'Courgette', cursive;
+}
+.Paym{
+    margin-top: 2%;
+    color: #9668b0;
+    font-family: 'Langar', cursive,Regular 400;
+    font-weight: 600;
+}

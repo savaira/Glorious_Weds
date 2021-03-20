@@ -1,11 +1,16 @@
 .Update{
-  -ms-flow-into: 20px;
-  font-weight: 500;
-  margin-top: 20px;
-  font-size: 20px;
-  font-family: 'Amaranth', sans-serif,Regular 400;
+    -ms-flow-into: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Great Vibes', cursive;
+    color: #9668b0;
 }
 
 .tex{
-color: red;
+  color: red;
+}
+.editData{
+  border: 3px solid black;
+ 
 }

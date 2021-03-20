@@ -25,7 +25,8 @@ const AboutUs = () => {
             <Row>
                 <Col><h3 className="term">Terms and Conditions</h3></Col>
             </Row>
-            <Row>
+            
+                <div className="condition">
                 <lu className="condi">
                     <li className="condihov">30 percent of the amount is to be paid by the customer at the time of confirmation of booking.</li>
                     <li className="condihov">Amount of advanve will not refunded incase of cancelation of the booking.</li>
@@ -40,7 +41,9 @@ const AboutUs = () => {
 	</li>
  
                 </lu>
-            </Row>
+                </div>
+                
+            
         </div>
      );
 }

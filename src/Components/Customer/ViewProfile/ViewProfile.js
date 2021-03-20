@@ -60,8 +60,8 @@ const ViewProfile = () => {
             
             </Container>
             <Container className="viewtbl">
-            <Table striped   >
-            <Link to="/Customer/UpdateProfile">
+            <Table striped  responsive >
+            <Link to="/Customer/UpdateProfile" style={{ textDecoration: 'none' }}>
                         <thead >
                             <tr className="tbldata">
 
