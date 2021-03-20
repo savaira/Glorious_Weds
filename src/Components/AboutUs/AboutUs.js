@@ -8,6 +8,7 @@ const AboutUs = () => {
             <Row>
                 <Col>
                 <h1 className="about">About Us</h1>
+                
                 </Col>
             </Row>
             <Row>
