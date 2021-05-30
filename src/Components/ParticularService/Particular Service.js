@@ -5,13 +5,18 @@ import './ParticularService.css'
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ShopIcon from '@material-ui/icons/ShoppingBasket';
-import ScrollAnimation from 'react-animate-on-scroll';
+import ProgressBar from 'react-bootstrap/ProgressBar'
+import {Row,Col} from 'react-bootstrap'
+import { useLocalStorage } from './../LocalStorage/Local';
 
 const useStyles = makeStyles({
   root: {
+      marginLeft:"-54%",
+      marginTop:"8%",
+      width:"30%",
     background: 'linear-gradient(45deg, #A52A2A 30%, #00008B 90%)',
     border: 0,
-    borderRadius: 3,
+    borderRadius: "10px",
     boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
     color: 'white',
     height: 48,
@@ -30,9 +35,10 @@ const ParticularService = ({match}) => {
         price : "",
         image : "",
         email : "",
-        service:""
+        service:"",
+        rating:0
         });
-            
+    const [name, setName] = useLocalStorage('username', 'null'); 
     useEffect(async() => {
         const db = firebase.collection('Services');
         const snapshot = await db.where('sname', '==',(match.params.id) ).get();
@@ -43,14 +49,18 @@ const ParticularService = ({match}) => {
                  price:doc.data().price,
                  image:doc.data().images,
                  email:doc.data().email,
-                 service:doc.data().service
+                 service:doc.data().service,
+                 rating:doc.data().rating
                 });    
             });  
          
     },[]);
 
     const book = () =>{
-        if(state.service === 'Saloon'){
+        if(name == 'null'){
+            history.push("/Login")
+        }
+        else if(state.service === 'Saloon'){
             history.push(`/BookSaloon/${state.sname}`);
         }
         else if(state.service === 'Wedding Hall' || state.service === 'Catering' || state.service === 'Event Manager'){
@@ -62,15 +72,36 @@ const ParticularService = ({match}) => {
     }
     return ( 
         <div>
-            <ScrollAnimation animateIn='bounceInRight'
-  animateOut='bounceOutLeft'>
-  <h1 style={{marginTop:"20px"}} className="serName">{state.sname}</h1>
-</ScrollAnimation>
+           
+      <Row>
+          <Col><img width="400" height="400" className="servPic" src={state.image}/></Col>
+          <Col>
+          <h1  className="serName">{state.sname}</h1>
+          <Col sm={6}>
+          <ProgressBar  className="rat" striped variant="info" now={state.rating * 20} label={`${state.rating * 20}%`}/>
+          </Col>
+          <Col>
+          <h5 className="servPrice"> Rs.{state.price}</h5>
+          </Col>
+          <Col>
+          <Button className={classes.root} startIcon={<ShopIcon />} onClick={book}>Book Now</Button>
+          </Col>
+          </Col>
+      </Row>
+  <Row>
+      <Col><h4 className="Dhead">Description</h4></Col>
+      
+  </Row>
+  <Row>
+  <Col sm={9}><p className="servDes">{state.description}</p></Col>
+  </Row>
              
-             <img width="400" height="400" className="servPic" src={state.image}/>
-            <p className="servDes">{state.description}</p>
-            <h5 className="servPrice"> Rs.{state.price}</h5>
-            <Button className={classes.root} startIcon={<ShopIcon />} onClick={book}>Book Now</Button>
+             
+            
+           
+            
+            
+            
         </div>
      );
 }

@@ -75,7 +75,8 @@ const BookCarRental = ({match}) => {
          status:state.status,
          venue:state.venue,
          price:state.price,
-         payment:""
+         payment:"",
+         rating:0
          })
         setstate({...state, eror:""})
         history.push('/Order');

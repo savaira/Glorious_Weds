@@ -2,7 +2,148 @@
     height:11.5cm ;
     width: 21.5cm;
     background-color: black;
+    margin-top:8%;
+    border: solid 2px black;
 }
 .dgpic3{
-    margin-left:-680px;
+    margin-left:-290px;
 }
+.funName2{
+    background-color: black;
+    margin-left:-300px;
+    margin-top: 20px;
+    border:none;
+    color:goldenrod;
+    font-size:28px;
+    font-family:Lucida Handwriting;
+    
+}
+.funName2:hover{
+    border: dotted 2px gray;
+}
+.fatherName2{
+    margin-top: 4px;
+    background-color:black;
+    margin-left: 200px;
+    color:white; 
+    font-family:Copperplate;
+    margin-left: -90px;
+    border:none;
+    font-size: 20px;
+    
+
+}
+.fatherName2:hover{
+    border: dotted 2px gray;
+}
+.inviteArea2{
+
+    
+    background-color:black;
+    color:white;
+    margin-left:-350px;
+    font-size: 16px;
+    border: none;
+    resize: none;
+    overflow: hidden;
+}
+.inviteArea2:hover{
+    border: dotted 2px gray;
+}
+.brideName2{
+    background-color:black;
+    margin-left:-250px;
+    border:none;
+    color:goldenrod;
+    font-size: 25px;
+    
+    font-family: Lucida Handwriting;
+}
+.brideName2:hover{
+    border: dotted 2px gray;
+}
+.groomName2{
+    background-color:black;
+    margin-left: -250px;
+    border:none;
+    color:goldenrod;
+    font-size: 25px;
+    
+    font-family: Lucida Handwriting;
+}
+.groomName2:hover{
+    border: dotted 2px gray;
+}
+.with2{
+    background-color:black;
+    margin-left:-140px;
+    border:none;
+    color:goldenrod;
+    font-size: 20px;
+    
+    font-family: Lucida Handwriting;
+}
+.with2:hover{
+    border: dotted 2px gray;
+}
+.funDate2{
+    background-color:black;
+    margin-left:-260px;
+    border:none;
+    color:white;
+    font-size: 15px;
+   
+}
+.funDate2:hover{
+    border: dotted 2px gray;
+}
+.funTime2{
+    margin-top: -100px;
+    background-color:black;
+    margin-left:5px;
+    border:none;
+    color:white;
+    font-size: 15px;
+   
+}
+.funTime2:hover{
+    border: dotted 2px gray;
+}
+.funVenueName2{
+    margin-top: 3px;
+    background-color:black;
+    margin-left:-350px;
+    border:none;
+    color:white;
+    font-size: 17px;
+    border: none;
+    resize: none;
+    overflow: hidden;
+}
+.funVenueName2:hover{
+    border: dotted 2px gray;
+   
+}
+
+.toolItems{
+    margin-top:3px;
+  margin-left: 4px;
+    padding: 5px;
+    
+}
+.toolItemsButton1{
+    margin-top:4px;
+  margin-left: 4px;
+}
+
+.btName1{
+    font-family:'Times New Roman', Times, serif;
+}
+.toolbar1{
+    margin-left: 26%;
+        height:100px;
+        width:800px;
+       margin-top: 5%;
+        background-color: gainsboro;
+        border: 5px solid black;
+    }

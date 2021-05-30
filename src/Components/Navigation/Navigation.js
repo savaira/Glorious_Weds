@@ -11,16 +11,16 @@ const Navigation = () => {
     const location = useHistory();
     const navb=[
             {name : "Design Cards" , lnk : "/ViewTemplates"},
-            {name : "Stage Decor" , lnk : "#features"},
+            {name : "Stage Decor" , lnk : "/Stage"},
             {name : "About Us" , lnk : "/AboutUs"},
             {name : "Contact Us" , lnk : "/Contact"},
-            {name : "Join Us" , lnk : "/Login"}
+            {name : "Join Us" , lnk : "/Login"},
+            {name : "Chat" , lnk : "/Chat"}
         ];
 
     const onSubmitSearch = () =>{
         
         if (state){
-            console.log(state);
             location.push(`/Services/${state}`);
         }
         }
@@ -48,7 +48,6 @@ const Navigation = () => {
                 className="mr-sm-2" 
                 />
                 <Button 
-                type="submit"
                 variant="contained"
                 color="primary"
                 onClick={onSubmitSearch}

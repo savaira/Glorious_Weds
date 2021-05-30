@@ -79,7 +79,8 @@ const BookHallCatEvent = ({match}) => {
          nopeople: state.nopeople,
          ftime:state.ftime,
          price:state.price,
-         payment:""
+         payment:"",
+         rating:0
          })
         setstate({...state, eror:""})
         history.push('/Order');

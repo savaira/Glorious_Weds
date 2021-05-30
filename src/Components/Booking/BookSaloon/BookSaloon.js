@@ -69,7 +69,8 @@ const BookSaloon = ({match}) => {
          demail:state.demail,
          status:state.status,
          price:state.price,
-         payment:""
+         payment:"",
+         rating:0
          })
         setstate({...state, eror:""})
         history.push('/Order');

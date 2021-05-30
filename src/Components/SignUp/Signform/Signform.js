@@ -35,6 +35,8 @@ const Signform = () => {
     people :"customer",
     erro:""
     });
+    const validPassword = new RegExp('^(?=.?[A-Za-z])(?=.?[0-9]).{6,}$');
+
     const onSubmit = async () => {
        if(!state.fname){
            setstate({...state , erro:'Enter First Name'});
@@ -53,6 +55,9 @@ const Signform = () => {
        }
        else if(!state.pass){
         setstate({...state , erro:'Enter Password'});
+       }
+       else if(!validPassword.test(state.pass)){
+        setstate({...state , erro:'Your password must contain a number, a capital letter, a small letter and length of 6 charaters or more'});
        }
        else if(!state.cpass){
         setstate({...state , erro:'Enter Confirm password'});

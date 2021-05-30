@@ -5,6 +5,7 @@ import LoginForm from "./LoginForm/LoginForm";
 import LoginText from "./LoginText/LoginText";
 import Sidebar from "./SideBar/Sidebar";
 import './Login.css'
+import ParticlesBg from 'particles-bg'
 const Login = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Login = () => {
           <Sidebar/>
         </Col>
         </Row>
+        <ParticlesBg type="fountain" bg={true}  />
         </div>
   );
 };

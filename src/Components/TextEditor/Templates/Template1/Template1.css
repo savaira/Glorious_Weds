@@ -1,34 +1,169 @@
 .design1{
     height:10.5cm ;
     width: 22cm;
-    background-color: maroon;
+    margin-top: 5%;
+    border: solid 2px black;
 }
 .dgpic1{
     margin-left:-300px;
+    -webkit-box-reflect: right 410%;
+    
 }
-.dgpic2{
+/* .dgpic2{
 margin-left:680px;
+
+margin-top: -550px;
+
 margin-bottom: -340px;
-}
+
+} */
 .fatherName{
     margin-top: 40px;
     background-color: maroon;
+    color:goldenrod; 
+    font-family: Lucida Handwriting;
     margin-left: -380px;
     border:none;
-    color:goldenrod;
     font-size: 25px;
-    font-weight: bold;
+  position: absolute;
+  cursor: move;
+
 }
 .fatherName:hover{
     border: dotted 2px gray;
 }
 .inviteArea{
-    margin-top: -170px;
+
+    margin-top: -100px;
     background-color: maroon;
     color:goldenrod;
+    margin-left:50px;
     font-size: 18px;
     border: none;
+    resize: none;
+    overflow: hidden;
+  
 }
 .inviteArea:hover{
     border: dotted 2px gray;
 }
+.brideName{
+    background-color: maroon;
+    margin-left:140px;
+    border:none;
+    color:goldenrod;
+    font-size: 25px;
+    
+    font-family: Lucida Handwriting;
+}
+.brideName:hover{
+    border: dotted 2px gray;
+}
+.groomName{
+    background-color: maroon;
+    margin-left: 140px;
+    border:none;
+    color:goldenrod;
+    font-size: 25px;
+    
+    font-family: Lucida Handwriting;
+}
+.groomName:hover{
+    border: dotted 2px gray;
+}
+.funName{
+    background-color: maroon;
+    margin-left:270px;
+    border:none;
+    color:goldenrod;
+    font-size: 24px;
+    font-family:Copperplate;
+}
+.funName:hover{
+    border: dotted 2px gray;
+}
+.funDate{
+    background-color: maroon;
+    margin-left:270px;
+    border:none;
+    color:goldenrod;
+    font-size: 15px;
+   
+}
+.funDate:hover{
+    border: dotted 2px gray;
+}
+.funTime{
+    margin-top: -100px;
+    background-color: maroon;
+    margin-left:270px;
+    border:none;
+    color:goldenrod;
+    font-size: 15px;
+   
+}
+.funTime:hover{
+    border: dotted 2px gray;
+}
+.with{
+    margin-top:-220px;
+    background-color: maroon;
+    margin-left:90px;
+    border:none;
+    color:goldenrod;
+    font-size: 16px;
+    font-family: Lucida Handwriting;
+   
+}
+.with:hover{
+    border: dotted 2px gray;
+}
+.funVenueName{
+    margin-top: -7px;
+    background-color: maroon;
+    margin-left:40px;
+    border:none;
+    color:goldenrod;
+    font-size: 13px;
+    border: none;
+    resize: none;
+    overflow: hidden;
+}
+.funVenueName:hover{
+    border: dotted 2px gray;
+   
+}
+.inviteArea:hover{
+    border: dotted 2px gray;
+
+}
+
+.toolItems{
+    margin-top:3px;
+  margin-left: 4px;
+    padding: 5px;
+    
+}
+.toolItemsButton1{
+    margin-top:4px;
+  margin-left: 4px;
+}
+
+.btName1{
+    font-family:'Times New Roman', Times, serif;
+}
+.toolbar1{
+    margin-left: 26%;
+        height:100px;
+        width:800px;
+       margin-top: 5%;
+        background-color: gainsboro;
+        border: 5px solid black;
+    }
+    .inpt{
+        background-color: maroon;
+        border: dotted 2px gray; 
+    }
+    .inpt:hover{
+        border: dotted 2px gray;  
+    }

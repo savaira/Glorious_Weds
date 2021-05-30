@@ -1,12 +1,19 @@
 .text{
     font-size:30px;
+    font-weight: 600;
+    color:blueviolet;
+  
 }
 .images{
-    height: 80%;
-    width: 60%;
+    margin-top: -2%;
+    height: 100%;
+    width: 80%;
 }
 #name{
     color: black;
+}
+.text:hover{
+    color:white;
 }
 @media screen and (max-width:600px){
     .images{ 

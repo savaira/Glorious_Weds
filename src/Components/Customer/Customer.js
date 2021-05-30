@@ -12,7 +12,8 @@ const Customer = ({match}) => {
     const history = useHistory();
 
     const logout = () =>{
-         setName('null');
+        localStorage.clear(); 
+        //setName('null');
          console.log(name);
          history.push('/')
     } 

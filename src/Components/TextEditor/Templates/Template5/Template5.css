@@ -1,9 +1,162 @@
 .design5{
     height: 17.78cm;
     width:12.7cm;
-    background-color: hotpink;
+    background-color:pink;
+    margin-top:3%;
+    border: solid 2px black;
 }
 .dgpic7{
-    margin-top:260px;
-    margin-left: -80px;
+    margin-top:-5%;
+    margin-left:-45%;
 }
+.fatherName5{
+    margin-top: 40px;
+    background-color: pink;
+    margin-left:50px;
+    color:green; 
+    font-family: Lucida Handwriting;
+    border:none;
+    font-size: 25px;
+  
+
+}
+.fatherName5:hover{
+    border: dotted 2px gray;
+}
+.inviteArea5{
+overflow: hidden;
+    margin-top: -3px;
+    background-color: pink;
+    color:red;
+    margin-left:50px;
+    font-size: 16px;
+    border: none;
+    resize: none;
+}
+.inviteArea5:hover{
+    border: dotted 2px gray;
+}
+.brideName5{
+    background-color: pink;
+    margin-left: 120px;
+    border:none;
+    color:green;
+    font-size: 25px;
+    
+    font-family: Lucida Handwriting;
+}
+.brideName5:hover{
+    border: dotted 2px gray;
+}
+.groomName5{
+    background-color: pink;
+    margin-left: 70px;
+    border:none;
+    color:green;
+    font-size: 25px;
+    
+    font-family: Lucida Handwriting;
+}
+.groomName5:hover{
+    border: dotted 2px gray;
+}
+.funName5{
+    background-color:pink;
+    margin-left:140px;
+    border:none;
+    color:red;
+    font-size: 24px;
+    font-family:Copperplate;
+}
+.funName5:hover{
+    border: dotted 2px gray;
+}
+.funDate5{
+    background-color: pink;
+    margin-left:20px;
+    border:none;
+    color:red;
+    font-size: 15px;
+   
+}
+.funDate5:hover{
+    border: dotted 2px gray;
+}
+.funTime5{
+    margin-top: -100px;
+    background-color: pink;
+    margin-left:150px;
+    border:none;
+    color:red;
+    font-size: 15px;
+   
+}
+.funTime5:hover{
+    border: dotted 2px gray;
+}
+.funVenue5{
+    margin-top:-220px;
+    background-color: pink;
+    margin-left:1550px;
+    border:none;
+    color:red;
+    font-size: 16px;
+   
+}
+.funVenue5:hover{
+    border: dotted 2px gray;
+}
+.funVenueName5{
+    margin-top: -5px;
+    background-color: pink;
+    margin-left:90px;
+    border:none;
+    color:red;
+    font-size: 15px;
+    border: none;
+    resize: none;
+    overflow: hidden;
+}
+.funVenueName5:hover{
+    border: dotted 2px gray;  
+}
+.inviteArea5:hover{
+    border: dotted 2px gray;
+
+}
+.with5{
+    margin-top: -5px;
+    background-color:pink;
+    margin-left:170px;
+    border:none;
+    color:red;
+    font-size: 17px;
+    border: none;
+    resize: none;
+}
+.with5:hover{
+    border: dotted 2px gray;
+   
+}
+
+.toolItems{
+    margin-top:3px;
+  margin-left: 4px;
+    padding: 5px;
+    
+}
+.toolItemsButton1{
+    margin-top:4px;
+  margin-left: 4px;
+}
+.btName1{
+    font-family:'Times New Roman', Times, serif;
+}
+.toolbar1{
+    margin-left: 26%;
+        height:100px;
+        width:800px;
+       margin-top: 5%;
+        background-color: gainsboro;
+        border: 5px solid black;
+    }

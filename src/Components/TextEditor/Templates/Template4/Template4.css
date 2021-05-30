@@ -1,12 +1,189 @@
-.design4{
+.designCard4{
     height:10.5cm ;
     width: 22cm;
     background-color: purple;
     border-left-style: solid;
     border-left-color: black;
     border-left-width: 120px;
+    margin-top: 5%;
+    border: solid 2px black;
 }
 .dgpic6{
-    margin-left:580px;
-    margin-top: 150px;
+    margin-left:66%;
+    margin-top:-280px;
 }
+.bless4{
+    margin-top: 4px;
+    background-color:purple;
+    margin-left: 40px;
+    color:white; 
+    font-family:Copperplate;
+    border:none;
+    font-size: 20px;
+      resize: none;
+      overflow: hidden;
+  }
+  .bless4:hover{
+    border: dotted 2px gray;
+  }
+  .fatherName4{
+    margin-top:-10px;
+    background-color:purple;
+    margin-left: 40px;
+    color:black; 
+    font-family:'Brush Script MT', cursive;
+    border:none;
+    font-size:28px;
+    
+    
+  }
+  .fatherName4:hover{
+    border: dotted 2px gray;
+  }
+  .inviteArea4{  
+    background-color:purple;
+    color:white;
+    margin-left:30px;
+    font-size: 16px;
+    border: none;
+    resize: none;
+    margin-top:-9px;
+    overflow: hidden;
+  }
+  .inviteArea4:hover{
+    border: dotted 2px gray;
+  }
+  .brideName4{
+    background-color:purple;
+    margin-left:50px;
+    border:none;
+    color:black;
+    font-size: 27px;
+    margin-top: -5px;
+    font-family:'Brush Script MT', cursive;
+  }
+  .brideName4:hover{
+    border: dotted 2px gray;
+  }
+  .groomName4{
+    background-color:purple;
+    margin-left:50px;
+    border:none;
+    color:black;
+    font-size: 27px;
+    margin-top: -5px;
+    font-family:'Brush Script MT', cursive;
+  }
+  .groomName4:hover{
+    border: dotted 2px gray;
+  }
+  .and4{
+    background-color:purple;
+    margin-left:120px;
+    border:none;
+    color:black;
+    font-size: 22px;
+    margin-top: -10px;
+    font-family:'Brush Script MT', cursive;
+  }
+  .and4:hover{
+    border: dotted 2px gray;
+  }
+  .funDate4{
+    background-color:purple;
+    margin-left:20px;
+    border:none;
+    color:white;
+    font-size: 15px;
+   margin-top:-20px;
+  }
+  .funDate4:hover{
+    border: dotted 2px gray;
+  }
+  .funTime4{
+    margin-top: -50px;
+    background-color:purple;
+    margin-left:140px;
+    border:none;
+    color:white;
+    font-size: 15px;
+   
+  }
+  .funTime4:hover{
+    border: dotted 2px gray;
+  }
+  
+  .funVenueName4{
+      margin-top:-5px;
+      background-color:purple;
+      margin-left:30px;
+      border:none;
+      color:white;
+      font-size: 13px;
+      border: none;
+      resize: none;
+      overflow: hidden;
+  }
+  .funVenueName4:hover{
+      border: dotted 2px gray;
+     
+  }
+  .of4{
+    background-color:purple;
+    margin-left:170px;
+    border:none;
+    color:white;
+    font-size: 15px;
+   margin-top: -10px;
+  }
+  .of4:hover{
+    border: dotted 2px gray;
+  }
+  .at4{
+  
+    background-color:purple;
+    margin-left:180px;
+    border:none;
+    color:white;
+    font-size: 15px;
+  
+  }
+  .at4:hover{
+    border: dotted 2px gray;
+  }
+  .funName4{
+    background-color:purple;
+    margin-left:220px;
+    margin-top:-40px;
+    border:none;
+    color:black;
+    font-size:22px;
+    font-family:Lucida Handwriting;
+    font-weight: bold;
+  }
+  .funName4:hover{
+    border: dotted 2px gray;
+  }
+ 
+.toolItems{
+    margin-top:3px;
+  margin-left: 4px;
+    padding: 5px;
+    
+}
+.toolItemsButton1{
+    margin-top:4px;
+  margin-left: 4px;
+}
+
+.btName1{
+  font-family:'Times New Roman', Times, serif;
+}
+.toolbar1{
+  margin-left: 26%;
+      height:100px;
+      width:800px;
+     margin-top: 5%;
+      background-color: gainsboro;
+      border: 5px solid black;
+  }

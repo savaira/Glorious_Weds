@@ -6,6 +6,7 @@ import { useHistory} from 'react-router-dom';
 import './UpdateStatus.css'
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import ReactStars from "react-rating-stars-component";
 
 
 const useStyles = makeStyles({
@@ -28,6 +29,7 @@ const UpdateStatus = ({match}) => {
     const classes = useStyles();
     const [name, setName] = useLocalStorage('username', 'null');
     const [data , setdata] = useState('');
+    const [Rate ,setRate] = useState('');
     const [state, setstate] = useState({
         statu:"",
         eror:""
@@ -36,7 +38,7 @@ const UpdateStatus = ({match}) => {
 
         useEffect(async() => {
             const db=firebase.collection('Booking').doc(match.params.id).get()
-                .then(snapshot => setdata(snapshot.data()))
+                .then(snapshot => setdata(snapshot.data()));
           },[]);
 
         const updateStauts = async () =>{
@@ -49,6 +51,9 @@ const UpdateStatus = ({match}) => {
           const chngstatus = async () =>{
               if(!state.statu || state.statu =='Change Status'){
                   setstate({...state, eror:'Select Status'});
+              }
+              else if(!data.payment && state.statu == 'Completed'){
+                setstate({...state, eror:'Payment is not Completed'});
               }
               else{
                 const db = firebase.collection('Booking');
@@ -95,6 +100,12 @@ const UpdateStatus = ({match}) => {
             <Row   className="dStatus">
                 <Col><th  >Price : </th><th className="dstat">{data.price}</th></Col>
             </Row>
+            { data.payment ? 
+            <Row>
+            <Col><th className="dStatus">Payment : </th><th className="dstat">{data.payment}</th></Col>
+            </Row>
+            : 
+            <p></p>}
             <Row   className="dStatus">
                 <Col><th  >Status : </th><th className="dstat">{data.status}</th></Col>
             </Row>
@@ -107,6 +118,7 @@ const UpdateStatus = ({match}) => {
                         <option value="">Select Status</option>
                         <option value="Accept">Accept</option>
                         <option value="Reject">Reject</option>
+                        <option value="Completed">Completed</option>
                         </select>
                         <Row>
                             <Col>
@@ -115,6 +127,24 @@ const UpdateStatus = ({match}) => {
                         </Row>
             
             <p>{state.eror}</p>
+            {data.rating ?  
+            <div>
+            <Row><h1>Customer Rating</h1></Row>
+            <Row>
+            <ReactStars
+             count={5}
+            size={50}
+            isHalf={true}
+            value={data.rating}
+            edit={false}
+            activeColor="#ffd700"
+            />
+            </Row>
+            </div>
+            :
+            <p></p>
+            }
+
             </Container> 
         </div>
     );

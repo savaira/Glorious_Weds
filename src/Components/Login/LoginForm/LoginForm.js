@@ -61,8 +61,9 @@ const LoginForm = () => {
       
     }
     else if(state.email == 'admin@gweds.com' && state.pass =='1234'){
-      setName(state.email);
-      history.push("/Header");
+     // setName(state.email);
+     localStorage.setItem('username', JSON.stringify(state.email));
+     history.push("/Header");
     }
     else{
     setstate({...state ,invalidpass : '' , invalidemail:''});

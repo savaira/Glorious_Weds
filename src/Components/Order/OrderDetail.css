@@ -22,3 +22,18 @@ font-weight: 200;
     font-family: 'Langar', cursive,Regular 400;
     font-weight: 600;
 }
+.discount{
+    margin-top: 3%;
+    margin-left: -81%;
+}
+.Corder{
+    margin-left:0.5%;
+}
+.DValue{
+    color: #7d7d7d;;
+    font-weight: 200;
+    padding-left: 10px;
+    font-family: 'Courgette', cursive;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

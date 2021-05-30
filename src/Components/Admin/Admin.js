@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect,useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css'
 import {Row,Col,FormControl,Container} from 'react-bootstrap'
 import { useHistory} from 'react-router-dom';
@@ -30,10 +30,16 @@ const Admin = ({match}) => {
   const history = useHistory();
  const [state , setstate] = useState('Admincustomer');
  const [name, setName] = useLocalStorage('username', 'null');
+
+ useEffect(async() => {
+  if(name == 'null')
+  history.push("/Login")
+    }, [0]);
     
     const logout = () =>{
-         setName('null');
-         console.log(name);
+        // setName('null');
+        // console.log(name);
+        localStorage.clear();
          history.push('/')
     }
 

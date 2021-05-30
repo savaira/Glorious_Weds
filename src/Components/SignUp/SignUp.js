@@ -3,7 +3,7 @@ import {Container,Row,Col} from 'react-bootstrap';
 import './SignUp.css'
 import Signbtn from './Signbtn/Signbtn';
 import Signform from './Signform/Signform';
-
+import ParticlesBg from 'particles-bg'
 const SignUp = () => {
     return (
         <Container>
@@ -15,7 +15,7 @@ const SignUp = () => {
 </Col>
 
 </Row>
-      
+<ParticlesBg type="color" bg={true}  />
     </Container>
       );
 }

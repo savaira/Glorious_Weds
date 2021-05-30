@@ -1,14 +1,169 @@
 .design3{
     height:11.5cm ;
-    width: 21.5cm;
-    background-color:navy;
+    width: 21.5cm ;
+    background-color:navy ;
+    margin-top: 5%;
+    border: solid 2px black;
 }
 .dgpic4{
    
- margin-left:-695px;
-    
+ margin-left:-290px;
+ -webkit-box-reflect: right 520%; 
 }
 .dgpic5{
-    margin-left: 700px;
-  margin-top: -400px;
+    margin-left:685px;
+  margin-top: -463px;
 }
+.bless{
+  margin-top: 4px;
+  background-color:navy;
+  margin-left: 200px;
+  color:white; 
+  font-family:Copperplate;
+  margin-left:-360px;
+  border:none;
+  font-size: 20px;
+    resize: none;
+overflow: hidden;
+}
+.bless:hover{
+  border: dotted 2px gray;
+}
+.fatherName3{
+  margin-top: 4px;
+  background-color:navy;
+  margin-left: -400px;
+  color:gold; 
+  font-family:'Brush Script MT', cursive;
+  border:none;
+  font-size:28px;
+  
+  
+
+}
+.fatherName3:hover{
+  border: dotted 2px gray;
+}
+.inviteArea3{
+
+    
+  background-color:navy;
+  color:white;
+  margin-left:-350px;
+  font-size: 16px;
+  border: none;
+  resize: none;
+  overflow: hidden;
+}
+.inviteArea3:hover{
+  border: dotted 2px gray;
+}
+.brideName3{
+  background-color:navy;
+  margin-left:-350px;
+  border:none;
+  color:gold;
+  font-size: 27px;
+  
+  font-family:'Brush Script MT', cursive;
+}
+.brideName3:hover{
+  border: dotted 2px gray;
+}
+.groomName3{
+  background-color:navy;
+  margin-left: -350px;
+  border:none;
+  color:gold;
+  font-size: 27px;
+  
+  font-family:'Brush Script MT', cursive;
+}
+.groomName3:hover{
+  border: dotted 2px gray;
+}
+.with3{
+  background-color:navy;
+  margin-left:-280px;
+  border:none;
+  color:gold;
+  font-size: 22px;
+  
+  font-family:'Brush Script MT', cursive;
+}
+.with3:hover{
+  border: dotted 2px gray;
+}
+.funDate3{
+  background-color:navy;
+  margin-left:-260px;
+  border:none;
+  color:white;
+  font-size: 15px;
+ 
+}
+.funDate3:hover{
+  border: dotted 2px gray;
+}
+.funTime3{
+  margin-top: -100px;
+  background-color:navy;
+  margin-left:5px;
+  border:none;
+  color:white;
+  font-size: 15px;
+ 
+}
+.funTime3:hover{
+  border: dotted 2px gray;
+}
+.funName3{
+  background-color:navy;
+  margin-left:-190px;
+  margin-top:5px;
+  border:none;
+  color:gold;
+  font-size:22px;
+  font-family:Lucida Handwriting;
+  
+}
+.funName3:hover{
+  border: dotted 2px gray;
+}
+.funVenueName3{
+    margin-top: 3px;
+    background-color:navy;
+    margin-left:-350px;
+    border:none;
+    color:white;
+    font-size: 15px;
+    border: none;
+    resize: none;
+    overflow: hidden;
+}
+.funVenueName3:hover{
+    border: dotted 2px gray;
+   
+}
+
+.toolItems{
+  margin-top:3px;
+margin-left: 4px;
+  padding: 5px;
+  
+}
+.toolItemsButton1{
+  margin-top:4px;
+margin-left: 4px;
+}
+.btName1{
+  font-family:'Times New Roman', Times, serif;
+}
+.toolbar1{
+  margin-left: 26%;
+      height:100px;
+      width:800px;
+     margin-top: 5%;
+      background-color: gainsboro;
+      border: 5px solid black;
+  }

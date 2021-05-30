@@ -35,7 +35,8 @@ const AddingService = () => {
     erro:"",
     imgname:"",
     dupname:"",
-    price:""
+    price:"",
+    rating:0
     });
     
 
@@ -97,7 +98,8 @@ const AddingService = () => {
           description:state.description,
           email:name,
           imgname:state.imgname,
-          price:state.price
+          price:state.price,
+          rating:state.rating
           })
      history.push("/Dealer/ViewServices")
      };

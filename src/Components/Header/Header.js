@@ -14,7 +14,7 @@ function Header(props) {
           <div className="col">
             <Glorious/>
           </div>
-          <div className="col-2">
+          <div className="col-2" style={{marginTop:"1%"}}>
             <SignText/>
           </div>
         </div>

@@ -1,10 +1,9 @@
 import React, { useEffect,useState } from 'react';
 import './SignText.css'
 import firebase from '../../Database/Database'
-import SignUp from './../../SignUp/SignUp';
 import {Link} from 'react-router-dom';
 import { useLocalStorage } from '../../LocalStorage/Local';
-import loginpic from './login2.png';
+import loginpic from './log.png';
 
 const SignText = () => {
     const [name, setName] = useLocalStorage('username', 'null');
@@ -20,7 +19,7 @@ const SignText = () => {
     const check = () => {
         if (name != 'null'){
             console.log(name);
-            if(name == 'admin@gweds.com'){
+            if(name === 'admin@gweds.com'){
                 return (
                     <Link to='/Admin/Admincustomer'>
                     <img src={loginpic} className="images" />
@@ -44,7 +43,7 @@ const SignText = () => {
         }
         else{
             return(
-            <Link to="/SignUp" className="text">Sign Up</Link>
+            <Link to="/SignUp" style={{textDecoration:"none"}} className="text">Sign Up</Link>
             );
         }
     }

@@ -27,9 +27,12 @@ import Contact from './Components/Contact/Contact';
 import Payment from './Components/Payment/Payment';
 import OrderDetail from './Components/Order/OrderDetail';
 import Map, { MapContainer } from './Components/Map/Map';
-import TextEditor from './Components/TextEditor/TextEditor';
 import ViewTemplates from './Components/DesignCard/ViewTemplates/ViewTemplates';
 import InputData from './Components/DesignCard/InputData/InputData';
+import Templates from './Components/TextEditor/Templates/Templates';
+import Notification from './Components/Notification';
+import Chat from './Components/Chat/Chat';
+import Stage from './Components/Stage Decor/Stage';
 
 function App() {
   return (
@@ -38,10 +41,14 @@ function App() {
       <Navigation/>
       <div className="content">
           <Switch>
-            <Route path="/ViewTemplates"><ViewTemplates/></Route>
+              <Route component={Templates} path="/Templates"></Route>
+              <Route path="/InputData/:temp" component={InputData}/>
+              <Route path="/ViewTemplates"><ViewTemplates/></Route>
               <Route path="/OrderDetail/:id" component={OrderDetail}/>
               <Route path="/Services/:search" component={Services}/>
               <Route path="/Payment"><Payment/></Route>
+              <Route path="/Chat"><Chat/></Route>
+              <Route path="/Stage"><Stage/></Route>
               <Route path="/AboutUs"><AboutUs/></Route>
               <Route path="/Contact"><Contact/></Route>
               <Route path="/Order"><Order/></Route>
