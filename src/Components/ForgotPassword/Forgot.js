@@ -7,8 +7,8 @@ import { Container, Row, Col} from 'react-bootstrap';
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ShopIcon from '@material-ui/icons/Email';
-
 import './Forgot.css'
+
 const useSty = makeStyles({
     root: {
       background: 'linear-gradient(45deg, #A52A2A 30%, #00008B 90%)',
@@ -62,9 +62,7 @@ const Forgot = () => {
     }
     const enter = () =>{
         if(state.chk== state.verification){
-            setName(state.email);
-            console.log(name);
-            console.log(state.email);
+            localStorage.setItem('username', JSON.stringify(state.email));
         history.push("/Header");
         }
         else{
