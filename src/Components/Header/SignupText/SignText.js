@@ -3,7 +3,7 @@ import './SignText.css'
 import firebase from '../../Database/Database'
 import {Link} from 'react-router-dom';
 import { useLocalStorage } from '../../LocalStorage/Local';
-import loginpic from './log.png';
+import loginpic from './logi.png';
 
 const SignText = () => {
     const [name, setName] = useLocalStorage('username', 'null');

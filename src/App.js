@@ -13,7 +13,6 @@ import SignUp from './Components/SignUp/SignUp';
 import Customer from './Components/Customer/Customer';
 import Servic from './Components/Services/Servic'
 import ParticularService from './Components/ParticularService/Particular Service';
-import TracknBill from './Components/TrackingNbilling/TracknBill';
 import Forgot from './Components/ForgotPassword/Forgot';
 import Dealer from './Components/Dealer/Dealer';
 import Dealerdetail from './Components/Admin/AdminDealer/Dealerdetail';
@@ -26,11 +25,9 @@ import AboutUs from './Components/AboutUs/AboutUs';
 import Contact from './Components/Contact/Contact';
 import Payment from './Components/Payment/Payment';
 import OrderDetail from './Components/Order/OrderDetail';
-import Map, { MapContainer } from './Components/Map/Map';
 import ViewTemplates from './Components/DesignCard/ViewTemplates/ViewTemplates';
 import InputData from './Components/DesignCard/InputData/InputData';
 import Templates from './Components/TextEditor/Templates/Templates';
-import Notification from './Components/Notification';
 import Chat from './Components/Chat/Chat';
 import Stage from './Components/Stage Decor/Stage';
 

@@ -12,6 +12,7 @@ import Draggable from "react-draggable";
 import Delcon from '@material-ui/icons/Delete';
 import Down from '@material-ui/icons/CloudDownload';
 import Re from '@material-ui/icons/Restore';
+import Addcon from '@material-ui/icons/Add';
 const useStyles = makeStyles({
     root: {
       background: 'linear-gradient(45deg, #A52A2A 30%, #00008B 90%)',
@@ -55,6 +56,7 @@ const useStyles = makeStyles({
     },
   });
 const Template2 = (props) => {
+    var count=0;
     const classes = useStyles();
     const ab=useStyle();
     const ac=useSty();
@@ -215,6 +217,36 @@ const Template2 = (props) => {
      textAlignment:"center",
        data:"Celebrations Marquee F-752, 6 Road Satellite Town Rawalpindi"
      });
+     const[field10,setfield10]=useState({
+        style:"Times New Roman",
+        size:"17px",
+        color:"white",
+        bold:"",
+        italics:"",
+        bgColor:"black",
+      textAlignment:"center",
+        data:"Add Text"
+      });
+      const[field11,setfield11]=useState({
+        style:"Times New Roman",
+        size:"17px",
+        color:"white",
+        bold:"",
+        italics:"",
+        bgColor:"black",
+      textAlignment:"center",
+        data:"Add Text"
+      });
+      const[field12,setfield12]=useState({
+        style:"Times New Roman",
+        size:"17px",
+        color:"white",
+        bold:"",
+        italics:"",
+        bgColor:"black",
+      textAlignment:"center",
+        data:"Add Text"
+      });
     
     const setdata = () =>{
         setfield1({...field1 ,
@@ -308,6 +340,36 @@ const Template2 = (props) => {
             bgColor:"black",
           textAlignment:"center",
         })
+        setfield10({...field10 ,
+            data :"Add Text",
+            style:"Times New Roman",
+            size:"17px",
+            color:"white",
+            bold:"",
+            italics:"",
+            bgColor:"black",
+          textAlignment:"center",
+        })
+        setfield11({...field11 ,
+            data :"Add Text",
+            style:"Times New Roman",
+            size:"17px",
+            color:"white",
+            bold:"",
+            italics:"",
+            bgColor:"black",
+          textAlignment:"center",
+        })
+        setfield12({...field12 ,
+            data :"Add Text",
+            style:"Times New Roman",
+            size:"17px",
+            color:"white",
+            bold:"",
+            italics:"",
+            bgColor:"black",
+          textAlignment:"center",
+        })
         setCardColor({...cardColor , bgColor:"black"});
       }
     useEffect(async() => {
@@ -339,8 +401,17 @@ const Template2 = (props) => {
        else if(a==8){
          setfield({...field ,style : field8.style , color : field8.color , size : field8.size,textAlignment:field8.textAlignment})
      }
+     else if(a==9){
+        setfield({...field ,style : field9.style , color : field9.color , size : field9.size,textAlignment:field9.textAlignment})
+    }
+    else if(a==10){
+        setfield({...field ,style : field10.style , color : field10.color , size : field10.size,textAlignment:field10.textAlignment})
+    }
+    else if(a==11){
+        setfield({...field ,style : field11.style , color : field11.color , size : field11.size,textAlignment:field11.textAlignment})
+    }
              else {
-                 setfield({...field ,style : field9.style , color : field9.color , size : field9.size,textAlignment:field9.textAlignment})
+                 setfield({...field ,style : field12.style , color : field12.color , size : field12.size,textAlignment:field12.textAlignment})
              }    
          }
      
@@ -412,12 +483,34 @@ const Template2 = (props) => {
              setfield8({...field8 ,bold : 'bold'})
          }
      }
+     else if(select==9){
+        if(field9.bold){
+            setfield9({...field9 ,bold : ''})
+        }
+        else{
+            setfield9({...field9 ,bold : 'bold'})
+        }
+    } else if(select==10){
+        if(field10.bold){
+            setfield10({...field10 ,bold : ''})
+        }
+        else{
+            setfield10({...field10 ,bold : 'bold'})
+        }
+    } else if(select==11){
+        if(field11.bold){
+            setfield11({...field11 ,bold : ''})
+        }
+        else{
+            setfield11({...field11 ,bold : 'bold'})
+        }
+    }
              else {
-                 if(field9.bold){
-                     setfield9({...field9 ,bold : ''})
+                 if(field12.bold){
+                     setfield12({...field12 ,bold : ''})
                  }
                  else{
-                     setfield9({...field9 ,bold : 'bold'})
+                     setfield12({...field12 ,bold : 'bold'})
                  }
              }
          }
@@ -490,12 +583,36 @@ const Template2 = (props) => {
              setfield8({...field8 ,italics : 'italic'})
          }
      }
+     else if(select==9){
+        if(field9.italics){
+            setfield9({...field9 ,italics : ''})
+        }
+        else{
+            setfield9({...field9 ,italics : 'italic'})
+        }
+    }
+    else if(select==10){
+        if(field10.italics){
+            setfield10({...field10 ,italics : ''})
+        }
+        else{
+            setfield10({...field10 ,italics : 'italic'})
+        }
+    }
+    else if(select==11){
+        if(field11.italics){
+            setfield11({...field11 ,italics : ''})
+        }
+        else{
+            setfield11({...field11 ,italics : 'italic'})
+        }
+    }
              else {
-                 if(field9.italics){
-                     setfield9({...field9 ,italics : ''})
+                 if(field12.italics){
+                     setfield12({...field12 ,italics : ''})
                  }
                  else{
-                     setfield9({...field9 ,italics : 'italic'})
+                     setfield12({...field12 ,italics : 'italic'})
                  }
              }
          }
@@ -527,8 +644,17 @@ const Template2 = (props) => {
        else if(select==8){
          setfield8({...field8 ,style : e.target.value})
      }
+     else if(select==9){
+        setfield9({...field9 ,style : e.target.value})
+    }
+    else if(select==10){
+        setfield10({...field10 ,style : e.target.value})
+    }
+    else if(select==11){
+        setfield11({...field11 ,style : e.target.value})
+    }
              else {
-                 setfield9({...field9 ,style : e.target.value})
+                 setfield12({...field12 ,style : e.target.value})
              }
          }
       
@@ -560,8 +686,17 @@ const Template2 = (props) => {
        else if(select==8){
          setfield8({...field8 ,size : e.target.value})
      }
+     else if(select==9){
+        setfield9({...field9 ,size : e.target.value})
+    }
+    else if(select==10){
+        setfield10({...field10 ,size : e.target.value})
+    }
+    else if(select==11){
+        setfield8({...field11 ,size : e.target.value})
+    }
              else {
-                 setfield9({...field9 ,size : e.target.value})
+                 setfield12({...field12 ,size : e.target.value})
              }
          }
      
@@ -593,8 +728,17 @@ const Template2 = (props) => {
       else if(select==8){
         setfield8({...field8 ,color : color.hex})
     }
+    else if(select==9){
+        setfield9({...field9 ,color : color.hex})
+    }
+    else if(select==10){
+        setfield10({...field10 ,color : color.hex})
+    }
+    else if(select==11){
+        setfield11({...field11 ,color : color.hex})
+    }
             else {
-                setfield9({...field9 ,color : color.hex})
+                setfield12({...field12 ,color : color.hex})
             }
         }
         const ChngbgColor=(color)=>{
@@ -608,6 +752,9 @@ const Template2 = (props) => {
             setfield7({...field7,bgColor:color.hex})
             setfield8({...field8,bgColor:color.hex})
             setfield9({...field9,bgColor:color.hex})
+            setfield10({...field10,bgColor:color.hex})
+            setfield11({...field11,bgColor:color.hex})
+            setfield12({...field12,bgColor:color.hex})
         }
          const ChngtextAlign = (e) =>{
              if(!select){
@@ -637,12 +784,22 @@ const Template2 = (props) => {
        else if(select==8){
          setfield8({...field8 ,textAlignment : e.target.value})
      }
+     else if(select==9){
+        setfield9({...field9 ,textAlignment : e.target.value})
+    }
+    else if(select==10){
+        setfield10({...field10 ,textAlignment : e.target.value})
+    }
+    else if(select==11){
+        setfield11({...field11 ,textAlignment : e.target.value})
+    }
              else {
-                 setfield9({...field9 ,textAlignment : e.target.value})
+                 setfield12({...field12,textAlignment : e.target.value})
              }
          }
          const reset=()=>{
             setdata();
+            count=0;
             var x1 = document.getElementById("f1");
             var x2 = document.getElementById("f2");
             var x3 = document.getElementById("f3");
@@ -679,6 +836,9 @@ const Template2 = (props) => {
             if (window.getComputedStyle(x9).visibility === "hidden") {
                                 x9.style.visibility = "visible";
                                 }
+            document.getElementById("f10").style.visibility = "hidden"; 
+            document.getElementById("f11").style.visibility = "hidden";
+            document.getElementById("f12").style.visibility = "hidden";               
                 }
                 const deleteField = () => {
                     if (select == 1) {
@@ -697,10 +857,33 @@ const Template2 = (props) => {
                       document.getElementById("f7").style.visibility = "hidden";
                     } else if (select == 8) {
                       document.getElementById("f8").style.visibility = "hidden";
-                    } else {
-                      document.getElementById("f9").style.visibility = "hidden";
+                    }else if (select == 9) {
+                        document.getElementById("f9").style.visibility = "hidden";
+                      }else if (select == 10) {
+                        document.getElementById("f10").style.visibility = "hidden";
+                      }else if (select == 11) {
+                        document.getElementById("f11").style.visibility = "hidden";
+                      }
+                     else {
+                      document.getElementById("f12").style.visibility = "hidden";
                     }
                   };
+                  const addField=()=>{
+ 
+                                        if(count==0){
+                                            document.getElementById("f10").style.visibility = "visible";
+                                            count=count+1;
+                                            console.log(count);
+                                        }
+                                         else if(count==1){
+                                          document.getElementById("f11").style.visibility = "visible";
+                                          count=count+1;
+                                          console.log(count);}
+                                          else if(count==2){
+                                            document.getElementById("f12").style.visibility = "visible";
+                                            count=count+1;
+                                            console.log(count);}
+                                        }     
     return ( 
         <div>
           <Container className="toolbar1" >
@@ -819,9 +1002,17 @@ const Template2 = (props) => {
                     <Row>
             <Col>
             <Draggable>
-            <input id="f6" className="funName2" value={field6.data} onChange={e => setfield6({...field6 ,data : e.target.value})}onClick={() => selected(6)} style={{fontFamily:field6.style,fontSize:field6.size,fontStyle:field6.italics,fontWeight:field6.bold,color:field6.color,backgroundColor:field6.bgColor,textAlign:field6.textAlignment,width:"300px",height:"40px"}} />
+            <input id="f6" className="funName2" value={field6.data} onChange={e => setfield6({...field6 ,data : e.target.value})}onClick={() => selected(6)} style={{fontFamily:field6.style,fontSize:field6.size,fontStyle:field6.italics,fontWeight:field6.bold,color:field6.color,backgroundColor:field6.bgColor,textAlign:field6.textAlignment,width:"200px",height:"40px"}} />
             </Draggable>
           </Col>
+          <Col><Draggable>
+                 <input
+                    id="f10"
+                    size={20}
+                    className="add" value={field10.data} onChange={e => setfield10({...field10 ,data : e.target.value})} onClick={() => selected(10)} style={{fontFamily:field10.style,fontSize:field10.size,fontStyle:field10.italics,fontWeight:field10.bold,color:field10.color,backgroundColor:field10.bgColor,visibility:"hidden",textAlign:field10.textAlignment}}
+                   
+                  />
+                </Draggable></Col>
             </Row>
                     <Row>
                     <Draggable>
@@ -848,9 +1039,17 @@ const Template2 = (props) => {
             <Row>
             <Col>
             <Draggable>
-            <input id="f4" className="with2" value={field4.data} onChange={e => setfield4({...field4 ,data : e.target.value})}  onClick={() => selected(4)} style={{fontFamily:field4.style,fontSize:field4.size,fontStyle:field4.italics,fontWeight:field4.bold,color:field4.color,backgroundColor:field4.bgColor,textAlign:field4.textAlignment,width:"300px",height:"40px"}}/>
+            <input id="f4" className="with2" value={field4.data} onChange={e => setfield4({...field4 ,data : e.target.value})}  onClick={() => selected(4)} style={{fontFamily:field4.style,fontSize:field4.size,fontStyle:field4.italics,fontWeight:field4.bold,color:field4.color,backgroundColor:field4.bgColor,textAlign:field4.textAlignment,width:"150px",height:"40px"}}/>
             </Draggable>
           </Col>
+          <Col><Draggable>
+                 <input
+                    id="f11"
+                    size={20}
+                    className="add" value={field11.data} onChange={e => setfield11({...field11 ,data : e.target.value})} onClick={() => selected(11)} style={{fontFamily:field11.style,fontSize:field11.size,fontStyle:field11.italics,fontWeight:field11.bold,color:field11.color,backgroundColor:field11.bgColor,visibility:"hidden",textAlign:field11.textAlignment}}
+                   
+                  />
+                </Draggable></Col>
             </Row>
             <Row>
             <Col>
@@ -875,6 +1074,14 @@ const Template2 = (props) => {
             <textarea id="f9" className="funVenueName2" rows="4" cols="30" value={field9.data} onChange={e => setfield9({...field9 ,data : e.target.value})} onClick={() => selected(9)} style={{fontFamily:field9.style,fontSize:field9.size,fontStyle:field9.italics,fontWeight:field9.bold,color:field9.color,backgroundColor:field9.bgColor,textAlign:field9.textAlignment,width:"300px",height:"80px"}} />
             </Draggable>
           </Col>
+          <Col><Draggable>
+                 <input
+                    id="f12"
+                    size={20}
+                    className="add" value={field12.data} onChange={e => setfield12({...field12 ,data : e.target.value})} onClick={() => selected(12)} style={{fontFamily:field12.style,fontSize:field12.size,fontStyle:field12.italics,fontWeight:field12.bold,color:field12.color,backgroundColor:field12.bgColor,visibility:"hidden",textAlign:field12.textAlignment}}
+                      
+                  />
+                </Draggable></Col>
           </Row>
           </Col> 
          
@@ -888,21 +1095,28 @@ const Template2 = (props) => {
             </div>
     </div>
     
-      <div style={{marginTop:"-12%",marginLeft:"30%"}} >
+      <div style={{marginTop:"-12%",marginLeft:"24%"}} >
           <Row>
               <Col>
               <Button className={classes.root} startIcon={<Re/>} onClick={reset}>Reset</Button>
+              </Col>
+              <Col>
+              <Button className={classes.root} startIcon={<Addcon/>} onClick={addField}>
+           Add
+         </Button>
               </Col>
               <Col >
               <Button className={classes.root} startIcon={<Down/>} onClick={click}>Download</Button>
               </Col>
           </Row>
-          <Button className={classes.root} startIcon={<Delcon/>} onClick={deleteField}>
+          <Button className={classes.root} style={{marginTop:"1%"}} startIcon={<Delcon/>} onClick={deleteField}>
           Delete
         </Button>
+        
       </div>
         </div>
      );
 }
  
 export default Template2;
+

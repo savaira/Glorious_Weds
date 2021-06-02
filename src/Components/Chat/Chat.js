@@ -32,25 +32,25 @@ export default function Chat() {
     const [messages, setMessage] = useState('');
     const [userUid, setUserUid] = useState(null);
     
-    useEffect(async() => {
-    if(name == 'null'){
-    history.push("/Login")
-    }
-    else{
-        const db = firebase.collection('User');
-        const snapshot = await db.where('email', '!=',name).get();
+    // useEffect(async() => {
+    // if(name == 'null'){
+    // history.push("/Login")
+    // }
+    // else{
+    //     const db = firebase.collection('User');
+    //     const snapshot = await db.where('email', '!=',name).get();
         
-        snapshot.forEach(doc => { 
-            setaray(aray =>([
-                ...aray,
-             {
-               name: (doc.data().fname),
-               uid2: (doc.data().email)
-             }
-           ]))
-         });
-    }
-      }, [name]);
+    //     snapshot.forEach(doc => { 
+    //         setaray(aray =>([
+    //             ...aray,
+    //          {
+    //            name: (doc.data().fname),
+    //            uid2: (doc.data().email)
+    //          }
+    //        ]))
+    //      });
+    // }
+    //   }, [name]);
 
       const initChat =async (user) => {
         
@@ -94,21 +94,46 @@ export default function Chat() {
          message:messages,
          createdAt:new Date(),
          })
-         setconversation(conversation =>([
-          ...conversation,
-       {
-         message: (messages),
-         uid1: (name)
-       }
-     ]));
+    //      setconversation(conversation =>([
+    //       ...conversation,
+    //    {
+    //      message: (messages),
+    //      uid1: (name)
+    //    }
+    //  ]));
           setMessage('');
+          setconversation([]);
+        
+        const db = firebase.collection('Chat');
+        const snapshot = await db
+        .where('uid1', 'in', [name, userUid])
+        .orderBy('createdAt', 'asc')
+        .onSnapshot((querySnapshot) => {
+
+            querySnapshot.forEach(doc => {
+                    
+                if(
+                    (doc.data().uid1 == name && doc.data().uid2 == userUid)
+                    || 
+                    (doc.data().uid1 == userUid && doc.data().uid2 == name)
+                ){
+                  setconversation(conversation =>([
+                    ...conversation,
+                 {
+                   message: (doc.data().message),
+                   uid1: (doc.data().uid1)
+                 }
+               ]));
+                  }
+      });
+    }); 
         }
       }
 
       return (
         <section className="contnr">
-
-        <div className="listOfUsers">
+{console.log("test")}
+        {/* <div className="listOfUsers">
           {
             aray.length > 0 ?
             aray.map(user => {
@@ -153,7 +178,7 @@ export default function Chat() {
             </div> : null
             }
             
-        </div>
+        </div> */}
     </section>
     )
 }

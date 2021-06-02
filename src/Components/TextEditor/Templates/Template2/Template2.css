@@ -10,7 +10,7 @@
 }
 .funName2{
     background-color: black;
-    margin-left:-300px;
+    margin-left:-80px;
     margin-top: 20px;
     border:none;
     color:goldenrod;
@@ -21,24 +21,29 @@
 .funName2:hover{
     border: dotted 2px gray;
 }
+.add{
+    border:none;
+}
+.add:hover{
+    border: dotted 2px gray;
+}
 .fatherName2{
-    margin-top: 4px;
+    margin-top:1px;
     background-color:black;
-    margin-left: 200px;
+   
     color:white; 
     font-family:Copperplate;
     margin-left: -90px;
     border:none;
     font-size: 20px;
     
+    
 
 }
 .fatherName2:hover{
     border: dotted 2px gray;
 }
-.inviteArea2{
-
-    
+.inviteArea2{ 
     background-color:black;
     color:white;
     margin-left:-350px;
@@ -46,6 +51,7 @@
     border: none;
     resize: none;
     overflow: hidden;
+    margin-top:10%;
 }
 .inviteArea2:hover{
     border: dotted 2px gray;
@@ -76,7 +82,7 @@
 }
 .with2{
     background-color:black;
-    margin-left:-140px;
+    margin-left:-50px;
     border:none;
     color:goldenrod;
     font-size: 20px;
@@ -112,7 +118,7 @@
 .funVenueName2{
     margin-top: 3px;
     background-color:black;
-    margin-left:-350px;
+    margin-left:-180px;
     border:none;
     color:white;
     font-size: 17px;

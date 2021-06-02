@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react';
 import firebase from '../Database/Database'
-import { Row,Col,Container } from 'react-bootstrap';
+import { Row,Col,Container} from 'react-bootstrap';
 import './OrderDetail.css'
 import ReactStars from "react-rating-stars-component";
 import { loadStripe } from "@stripe/stripe-js";
@@ -18,7 +18,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Mon from '@material-ui/icons/Money';
 import Pay from '@material-ui/icons/Payment';
 import Can from '@material-ui/icons/Cancel';
-import Servic from './../Services/Servic';
 
 const useStyles = makeStyles({
   root: {
@@ -37,20 +36,14 @@ const useStyles = makeStyles({
 const stripePromise = loadStripe("pk_test_51Hrg6GBIflWeFM0HdwRpYcyT6KnnJ6cRbWtws6i7VTo9uKzkAHLfalKGzOZG5OqYRGU5hBsfivpTa7L68cDYJ8h400wPFLgf2X");
 
 const OrderDetail = ({match}) => {
-  const classes = useStyles();
-  const [name, setName] = useLocalStorage('username', 'null');
+  
     const [data , setdata] = useState('');
-    const [servic ,setservic] = useState({
-      rating:0,
-      id:''
-    });
     const [dvalue,setdvalue]=useState(0);
     const history = useHistory();
-    const cancelOrder = async() =>{
-      const db = firebase.collection('Booking').doc(match.params.id).delete();
-      history.push('/Order/Order')
-  }
+    const classes = useStyles();
+    const [name, setName] = useLocalStorage('username', 'null');
     const [thank , setthank]= useState('');
+     
     useEffect(async() => {
         const db=firebase.collection('Booking').doc(match.params.id).get()
             .then(snapshot => setdata(snapshot.data()))
@@ -65,6 +58,35 @@ const OrderDetail = ({match}) => {
             setthank('Thanks For Rating Us');
              avgrating(newRating); 
       };
+    
+      const cancelOrder = async() =>{
+        const db = firebase.collection('Booking').doc(match.params.id).delete();
+        history.push('/Order/Order')
+    }
+
+    const avgrating = async(newRating) =>{
+      var avg=0;
+      var rateing=0;
+      var Id='';
+
+      const db1 = firebase.collection('Services');
+      const snapshots = await db1.where('sname', '==', data.sname).get();
+      snapshots.forEach(doc => {
+        rateing=doc.data().rating
+        Id=doc.id
+        });
+if(rateing == 0){
+avg=newRating
+}
+else{
+avg= ((rateing + newRating)/2)
+}
+const snap = await db1.doc(Id).update({
+rating:avg
+});
+history.push('/Order')
+    }
+
 const discount=async()=>{
   if(dvalue==0){
     var d=0;
@@ -84,33 +106,13 @@ const discount=async()=>{
   } 
  
 }
-      const avgrating = async(newRating) =>{
-        var avg=0;
-        const db1 = firebase.collection('Services');
-        const snapshot = await db1.where('sname', '==', data.sname).get();
-        snapshot.forEach(doc => {
-          setservic(servic =>
-          ({...servic, 
-           rating:doc.data().rating,
-           id:doc.id
-          }));
-        });
-if(servic.rating == 0){
-avg=newRating
-}
-else{
-avg= ((servic.rating + newRating)/2)
-}
-const snap = await db1.doc(servic.id).update({
-  rating:avg
-});
-history.push('/Order')
-      }
+      
+
     return ( 
         <div>
           <h1 className="OdDet">Order Details</h1>
             <Container className="OdName">
-             
+            
             <Row   >
                 <Col><th className="dStatus" >Dealer Email : </th><th className="OdVal">{data.demail}</th></Col>
             </Row>
@@ -172,7 +174,7 @@ history.push('/Order')
             }
             {data.status ==='Completed'  && data.rating == 0?  
             <div>
-            <Row><h1>Rate Us</h1></Row>
+            <Row><h1 style={{fontSize:"25px",marginTop:"1%",marginLeft:"1%",color:"#9668b0"}}>Rate Us</h1></Row>
             <Row>
             <ReactStars
              count={5}
@@ -185,7 +187,7 @@ history.push('/Order')
             </Row>
             </div>
             :
-            <p></p>
+            <p ></p>
             }
             {thank}
             </Container>

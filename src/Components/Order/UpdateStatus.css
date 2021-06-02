@@ -4,6 +4,7 @@
     font-weight: bold;
     color: #552c6c;
     font-family:'Great Vibes', cursive;
+    margin-top: 3%;
 }
 .dService{
     text-align: center;
@@ -19,5 +20,4 @@
     color:#7d7d7d;
     font-family: 'PT Sans Narrow', Tahoma, sans-serif;
     font-weight: lighter;
-    padding-left: 2%;
 }

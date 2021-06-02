@@ -12,7 +12,11 @@ const Servic = ({match}) => {
         setaray(aray =>([]));
           setnodata(`No ${match.params.service} Available`);
         const db = firebase.collection('Services');
-        const snapshot = await db.where('service', '==',(match.params.service) ).get();
+        const snapshot = await db
+        .where('service', '==',(match.params.service) )
+        .where('rating', '>=',0 )
+        .orderBy('rating', 'desc')
+        .get();
         
         if(!snapshot.empty){
             snapshot.forEach(doc => { 

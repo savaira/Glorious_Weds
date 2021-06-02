@@ -70,6 +70,9 @@ const ParticularService = ({match}) => {
             history.push(`/BookDecorPhotoCar/${state.sname}`);
         }
     }
+    const chatting = () =>{
+        history.push(`/Chat`);
+    }
     return ( 
         <div>
            
@@ -85,6 +88,9 @@ const ParticularService = ({match}) => {
           </Col>
           <Col>
           <Button className={classes.root} startIcon={<ShopIcon />} onClick={book}>Book Now</Button>
+          </Col>
+          <Col>
+          <Button className={classes.root} startIcon={<ShopIcon />} onClick={chatting}>Contact Dealer</Button>
           </Col>
           </Col>
       </Row>

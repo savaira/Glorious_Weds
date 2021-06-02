@@ -47,7 +47,7 @@ const Dorder = () => {
         <td key={i}>{i+1}</td>
         <td key={i}>{state.fdate}</td>
         <td key={i}>{state.sname}</td>
-        <Link style={{ textDecoration: 'none' }} to={`/UpdateStatus/${state.id}`}><td className="status" key={i}>{state.status}</td></Link>
+        <Link style={{ textDecoration: 'none' }} to={`/UpdateStatus/${state.id}`}><td style={{border:"none"}} className="status" key={i}>{state.status}</td></Link>
     </tr>)}
   </tbody>
 </Table>

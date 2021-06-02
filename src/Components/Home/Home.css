@@ -1,5 +1,42 @@
 .Gd{
     text-align: center;
-    margin-top: 220px;
-    margin-left: 120px;
+  
+    position: absolute;
+ 
+  margin-left: 50%;
+  transform: translate(-50%, -50%);
 }
+.homeBg{
+    width:100%;
+    height: 50%;
+}
+.co{
+  position: relative;
+ 
+  color: white;
+}
+.homeBg2{
+  position: absolute;
+  margin-top:-32%;
+  margin-left: -5%;
+ 
+}
+@media (min-width: 576px) {
+.Gd{
+  margin-top:-25%;
+}
+
+}
+
+/* // Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }*/
+
+
+@media (min-width: 992px) { 
+.Gd{
+  margin-top: -35%;
+}
+} 
+
+/* // Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } */
